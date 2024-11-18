@@ -62,7 +62,7 @@ class _SplashscreenState extends State<Splashscreen> {
                     ),
                   ),
                   SizedBox(height: 22,),
-                  Text("QuizSutra",style: TextStyle(fontSize: 48,color: Colors.white,fontWeight: FontWeight.w700),),
+                  Text("QuizSutra",style: TextStyle(fontSize: 48,letterSpacing: 2,color: Colors.white,fontWeight: FontWeight.w700),),
                   SizedBox(height: 32,),
 
                   CircularProgressIndicator(

@@ -32,11 +32,11 @@ class _QuizcodeState extends State<Quizcode> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 97,bottom: 67),
-                  child: Text("QuizSutra",style: TextStyle(fontSize: 48,fontWeight: FontWeight.w700,color: Colors.white),),
+                  child: Text("QuizSutra",style: TextStyle(fontSize: 48,fontWeight: FontWeight.bold,letterSpacing: 2,color: Colors.white),),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom : 74),
-                  child: Text("Join using code",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: Colors.white),),
+                  child: Text("Join using code",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: Colors.white70),),
                 ),
 
                 Padding(
@@ -44,12 +44,14 @@ class _QuizcodeState extends State<Quizcode> {
                   child: TextFormField(
                     controller: usernamecontroller,
                     decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.2),
                       hintText: 'Username',
                       hintStyle: TextStyle(
                         color: Colors.white70
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)
+                        borderRadius: BorderRadius.circular(15)
                       ),
                     ),
                    style: TextStyle(color: Colors.white, fontSize: 18),
@@ -61,12 +63,14 @@ class _QuizcodeState extends State<Quizcode> {
                   child: TextFormField(
                     controller: codeinputcontroller,
                     decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.2),
                       hintText: 'Enter a join code',
                       hintStyle: TextStyle(
                         color: Colors.white70
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)
+                        borderRadius: BorderRadius.circular(15)
                       ),
                     ),
                    style: TextStyle(color: Colors.white, fontSize: 18),
