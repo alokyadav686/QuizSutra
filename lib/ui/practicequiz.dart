@@ -237,7 +237,7 @@ class _PracticequizState extends State<Practicequiz> {
                 SizedBox(
                 height: 20,
               ),
-            
+
                 InkWell(
                   onTap: () {
                     
@@ -249,47 +249,85 @@ class _PracticequizState extends State<Practicequiz> {
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.white
                     ),
-                  ),
-                ),
-            
-                SizedBox(
-                  height: 20,
-                ),
-            
-                InkWell(
-                  onTap: () {
-                    
-                  },
-                  child: Container(
-                    width: double.infinity,
-                    height: 200,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.white
-                    ),
-                  ),
-                ),
-            
-                SizedBox(
-                  height: 20,
-                ),
-                
-                InkWell(
-                  onTap: () {
-                    
-                  },
-                  child: Container(
-                    width: double.infinity,
-                    height: 200,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.white
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 50,
+                          decoration: BoxDecoration(
+                          color: Colors.purple,
+                          borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Center(child: Text("Start Quiz",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),)))
+                      ],
                     ),
                   ),
                 ),
                 SizedBox(
                 height: 20,
               ),
+
+                InkWell(
+                  onTap: () {
+                    
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.white
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 50,
+                          decoration: BoxDecoration(
+                          color: Colors.purple,
+                          borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Center(child: Text("Start Quiz",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),)))
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                height: 20,
+              ),
+
+                InkWell(
+                  onTap: () {
+                    
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.white
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 50,
+                          decoration: BoxDecoration(
+                          color: Colors.purple,
+                          borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Center(child: Text("Start Quiz",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),)))
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                height: 20,
+              ),
+              
               ],
             ),
           ),
