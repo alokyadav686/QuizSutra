@@ -108,7 +108,7 @@ class _QuizcodeState extends State<Quizcode> {
         
                   InkWell(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Practicequiz()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Practicequiz()));
                     },
                     child: Container(
                       width: 250,
