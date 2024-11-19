@@ -29,13 +29,14 @@ class _QuizcodeState extends State<Quizcode> {
               borderRadius: BorderRadius.circular(50),
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 97,bottom: 67),
+                  padding: const EdgeInsets.only(top: 100,bottom: 50),
                   child: Text("QuizSutra",style: TextStyle(fontSize: 48,fontWeight: FontWeight.bold,letterSpacing: 2,color: Colors.white),),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom : 74),
+                  padding: const EdgeInsets.only(bottom : 40),
                   child: Text("Join using code",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: Colors.white70),),
                 ),
 
@@ -80,25 +81,33 @@ class _QuizcodeState extends State<Quizcode> {
                 SizedBox(height: 30,),
 
                 Container(
-                  width: 100,
-                  height: 40,
+                  width: 200,
+                  height: 50,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(139, 5, 180, 1),
-                    borderRadius: BorderRadius.circular(10)
+                    gradient: LinearGradient(
+                        colors: [Color(0xFF8B05B4), Color(0xFF8E2DE2)],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                    borderRadius: BorderRadius.circular(25)
                   ),
                   child: Center(child: Text("Join", style: TextStyle(color: Colors.white,fontSize: 20),)),
                 ),
 
-                 SizedBox(height: 10,),
+                 SizedBox(height: 20,),
                  Text("or",style: TextStyle(fontSize: 18,color: Colors.white),),
-                 SizedBox(height: 10,),
+                 SizedBox(height: 20,),
 
                 Container(
-                  width: 150,
-                  height: 40,
+                  width: 250,
+                  height: 50,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(139, 5, 180, 1),
-                    borderRadius: BorderRadius.circular(10)
+                    gradient: LinearGradient(
+                        colors: [Color(0xFF8B05B4), Color(0xFF8E2DE2)],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                    borderRadius: BorderRadius.circular(25)
                   ),
                   child: Center(child: Text("Practice Quiz", style: TextStyle(color: Colors.white,fontSize: 20),)),
                 ),
