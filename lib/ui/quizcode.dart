@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizsutra/ui/practicequiz.dart';
 
 class Quizcode extends StatefulWidget {
   const Quizcode({super.key});
@@ -91,7 +92,7 @@ class _QuizcodeState extends State<Quizcode> {
                       height: 50,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Color(0xFF8B05B4), Color(0xFF8E2DE2)],
+                            colors: [Color.fromRGBO(139, 5, 180, 1), Color.fromRGBO(142, 45, 226, 1)],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
@@ -107,14 +108,14 @@ class _QuizcodeState extends State<Quizcode> {
         
                   InkWell(
                     onTap: () {
-                      
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Practicequiz()));
                     },
                     child: Container(
                       width: 250,
                       height: 50,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Color(0xFF8B05B4), Color(0xFF8E2DE2)],
+                            colors: [Color.fromRGBO(139, 5, 180, 1), Color.fromRGBO(142, 45, 226, 1)],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
