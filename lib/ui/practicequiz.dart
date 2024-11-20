@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:quizsutra/ui/quizcode.dart';
 
@@ -9,9 +10,16 @@ class Practicequiz extends StatefulWidget {
 }
 
 class _PracticequizState extends State<Practicequiz> {
+  
+int currentPage =0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: ElevatedButton(
+        iconAlignment: IconAlignment.start,
+        
+        child: Text("Join with code", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.purple),) ,onPressed: (){}),
       appBar: AppBar(
         title: 
         Text("Khelega Quiz??",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.white),),
@@ -172,73 +180,124 @@ class _PracticequizState extends State<Practicequiz> {
           color: Colors.purple,
 
         ),
+        
 
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 4),
-                ),
-                SizedBox(
-                height: 20,
-              ),
-
-                Container(
-                  width: double.infinity,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.white
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              
+            //   SizedBox(
+            //   height: 20,
+            // ),
+        
+              // Container(
+              //   width: double.infinity,
+              //   height: 200,
+              //   decoration: BoxDecoration(
+              //     borderRadius: BorderRadius.circular(15),
+              //     color: Colors.white
+              //   ),
+              // ),
+          
+              // SizedBox(
+              //   height: 10,
+              // ),
+        
+              // Row(
+              //   // crossAxisAlignment: CrossAxisAlignment.center,
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Container(
+              //       width: 10,
+              //       height: 10,
+              //       decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.circular(50),
+              //         color: Colors.white
+              //       ),
+              //     ),
+              //     SizedBox(
+              //       width: 3,
+              //     ),
+              //     Container(
+              //       width: 10,
+              //       height: 10,
+              //       decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.circular(50),
+              //         color: Colors.white54
+              //       ),
+              //     ),
+              //     SizedBox(
+              //       width: 3,
+              //     ),
+              //     Container(
+              //       width: 10,
+              //       height: 10,
+              //       decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.circular(50),
+              //         color: Colors.white54
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              SizedBox(
+              height: 20,
+            ),
+        
+              Column(
+                children: [
+                  CarouselSlider(
+                    items: [
+                      Container(
+                    
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.white
+                    ),
                   ),
-                ),
-            
-                SizedBox(
-                  height: 10,
-                ),
+                   Container(
+                    
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: const Color.fromARGB(255, 226, 28, 28)
+                    ),
+                  ), Container(
+                    
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: const Color.fromARGB(255, 80, 0, 142)
+                    ),
+                  ),
+                          
+                    ], 
+                    options: CarouselOptions(
+                      height: 200,
+                      aspectRatio: 16/9,
+                      autoPlay: true,
+                      enlargeCenterPage: true,
+                      autoPlayCurve: Curves.fastOutSlowIn,
+                      autoPlayAnimationDuration: Duration(seconds: 1),
+                      viewportFraction: 0.8,
 
-                Row(
-                  // crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: Colors.white
-                      ),
+                      onPageChanged: (index, reason) {
+                        setState(() {
+                          currentPage=index;
+                        });
+                      },
+                      
+                          
+                    )
                     ),
-                    SizedBox(
-                      width: 3,
-                    ),
-                    Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: Colors.white54
-                      ),
-                    ),
-                    SizedBox(
-                      width: 3,
-                    ),
-                    Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: Colors.white54
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                height: 20,
+                    SizedBox(height: 8,),
+                    buildcarouselindicator()
+                ],
               ),
-
-                Container(
+                SizedBox(
+                  height: 20,
+                ),
+        
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
                   width: double.infinity,
                   height: 200,
                   decoration: BoxDecoration(
@@ -264,11 +323,14 @@ class _PracticequizState extends State<Practicequiz> {
                     ],
                   ),
                 ),
-                SizedBox(
-                height: 20,
               ),
-
-                Container(
+              SizedBox(
+              height: 20,
+            ),
+        
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
                   width: double.infinity,
                   height: 200,
                   decoration: BoxDecoration(
@@ -295,11 +357,14 @@ class _PracticequizState extends State<Practicequiz> {
                     ],
                   ),
                 ),
-                SizedBox(
-                height: 20,
               ),
-
-                Container(
+              SizedBox(
+              height: 20,
+            ),
+        
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
                   width: double.infinity,
                   height: 200,
                   decoration: BoxDecoration(
@@ -309,7 +374,7 @@ class _PracticequizState extends State<Practicequiz> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-
+                        
                       InkWell(
                         onTap: () {
                           
@@ -326,16 +391,38 @@ class _PracticequizState extends State<Practicequiz> {
                     ],
                   ),
                 ),
-                SizedBox(
-                height: 20,
               ),
-              
-              ],
+              SizedBox(
+              height: 20,
             ),
+            
+            ],
           ),
         ),
 
       ),
     );
   }
+
+  
+buildcarouselindicator() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      for(int i=0; i<3;i++)
+  
+        Container(
+          margin: EdgeInsets.all(3),
+          height: i== currentPage ? 8: 5,
+          width:  i== currentPage ? 8: 5,
+          decoration:BoxDecoration(
+            color: i==currentPage ? Colors.white : Colors.white70,
+            shape: BoxShape.circle,
+           
+  
+          ),
+        )
+    ],
+  );
+}
 }
