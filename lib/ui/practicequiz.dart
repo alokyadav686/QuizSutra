@@ -1,6 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:quizsutra/offlinequizinterface/offlinequizinterface1.dart';
+import 'package:quizsutra/offlinequizinterface/offlinequizinterface2.dart';
+import 'package:quizsutra/offlinequizinterface/offlinequizinterface3.dart';
 import 'package:quizsutra/ui/quizcode.dart';
+
+
 
 class Practicequiz extends StatefulWidget {
   const Practicequiz({super.key});
@@ -16,6 +21,7 @@ int currentPage =0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple,
       floatingActionButton: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.purple,
@@ -260,26 +266,48 @@ int currentPage =0;
                 children: [
                   CarouselSlider(
                     items: [
-                      Container(
-                    
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.white
-                    ),
-                  ),
-                   Container(
-                    
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: const Color.fromARGB(255, 226, 28, 28)
-                    ),
-                  ), Container(
-                    
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: const Color.fromARGB(255, 80, 0, 142)
-                    ),
-                  ),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface1()));
+
+                        },
+                        child: Container(
+                                            
+                                            decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        // color: Colors.white
+                        image: DecorationImage(image: AssetImage("assets/images/coding.jpg"),fit: BoxFit.cover)
+                                            ),
+                                          ),
+                      ),
+
+                   InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface2()));
+                    },
+                     child: Container(
+                      
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        // color: const Color.fromARGB(255, 226, 28, 28)
+                        image: DecorationImage(image: AssetImage("assets/images/aptitude.jpg"),fit: BoxFit.cover)
+                      ),
+                                       ),
+                   ),
+                  
+                   InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface3()));
+                    },
+                     child: Container(
+                      
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        // color: const Color.fromARGB(255, 80, 0, 142)
+                        image: DecorationImage(image: AssetImage("assets/images/reasoning.jpeg"),fit: BoxFit.cover)
+                      ),
+                                       ),
+                   ),
                           
                     ], 
                     options: CarouselOptions(
@@ -313,17 +341,19 @@ int currentPage =0;
                   child: Column(
                     children: [
                         buildCategoryCard("Coding","Duration: 30 min","Questions = 10",Icon(Icons.code, size: 90, color: Colors.purple),  () {
-
+                          // print("quiz1 tapped");
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface1()));
                         }),
                           SizedBox(height: 20),
                   
                           buildCategoryCard("Aptitude","Duration: 30 min","Questions = 10", Icon(Icons.calculate, size: 90, color: Colors.purple), () {
-
+                            // print("quiz2 tapped");
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface2()));
                           }),
                           SizedBox(height: 20),
                   
                           buildCategoryCard("Logical Reasoning","Duration: 30 min","Questions = 10",Icon(Icons.lightbulb_outline, size: 90, color: Colors.purple),  () {
-
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface3()));
                           }),
                           SizedBox(height: 20),
                     ],
@@ -361,44 +391,47 @@ buildcarouselindicator() {
 }
 }
 
-Widget buildCategoryCard(String categoryName,String categoryDuration,String categoryQuestions, Icon categoryIcon,  VoidCallback onTap) {
-  return Container(
-    width: double.infinity,
-    height: 120,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(15),
-      color: Colors.white,
-      boxShadow: [
-        BoxShadow(
-          color: Colors.black26,
-          blurRadius: 4,
-          offset: Offset(2, 4),
-        ),
-      ],
-    ),
-    child: Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: categoryIcon,
-        ),
-
-        Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(categoryName,style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.purple,),),
-              SizedBox(height: 3),
-              Text(categoryDuration,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.purple,),),
-              Text(categoryQuestions,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.purple,),),
-              // SizedBox(height: 10),
-              
-            ],
+Widget buildCategoryCard(String categoryName,String categoryDuration,String categoryQuestions, Icon categoryIcon,  VoidCallback tapkrnekebaad) {
+  return InkWell(
+    onTap: tapkrnekebaad,
+    child: Container(
+      width: double.infinity,
+      height: 120,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 4,
+            offset: Offset(2, 4),
           ),
-        ),
-      ],
+        ],
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: categoryIcon,
+          ),
+    
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(categoryName,style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.purple,),),
+                SizedBox(height: 3),
+                Text(categoryDuration,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.purple,),),
+                Text(categoryQuestions,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.purple,),),
+                // SizedBox(height: 10),
+                
+              ],
+            ),
+          ),
+        ],
+      ),
     ),
   );
 }

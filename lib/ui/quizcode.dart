@@ -14,6 +14,7 @@ class _QuizcodeState extends State<Quizcode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple,
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
