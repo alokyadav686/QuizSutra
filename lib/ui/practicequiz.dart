@@ -307,108 +307,29 @@ int currentPage =0;
                 SizedBox(
                   height: 20,
                 ),
-        
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Container(
-                  width: double.infinity,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.white
-                  ),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      InkWell(
-                        onTap: () {
-                            // print("button tapped");
-                        },
-                        child: Container(
-                          width: 150,
-                          height: 50,
-                          decoration: BoxDecoration(
-                          color: Colors.purple,
-                          borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Center(child: Text("Start Quiz",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),))),
-                      )
+                        buildCategoryCard("Coding","Duration: 30 min","Questions = 10",Icon(Icons.code, size: 90, color: Colors.purple),  () {
+
+                        }),
+                          SizedBox(height: 20),
+                  
+                          buildCategoryCard("Aptitude","Duration: 30 min","Questions = 10", Icon(Icons.calculate, size: 90, color: Colors.purple), () {
+
+                          }),
+                          SizedBox(height: 20),
+                  
+                          buildCategoryCard("Logical Reasoning","Duration: 30 min","Questions = 10",Icon(Icons.lightbulb_outline, size: 90, color: Colors.purple),  () {
+
+                          }),
+                          SizedBox(height: 20),
                     ],
                   ),
-                ),
-              ),
-              SizedBox(
-              height: 20,
-            ),
-        
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Container(
-                  width: double.infinity,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.white
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          
-                        },
-                        
-                        child: Container(
-                          width: 150,
-                          height: 50,
-                          decoration: BoxDecoration(
-                          color: Colors.purple,
-                          borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Center(child: Text("Start Quiz",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),))),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-              height: 20,
-            ),
-        
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Container(
-                  width: double.infinity,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.white
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                        
-                      InkWell(
-                        onTap: () {
-                          
-                        },
-                        child: Container(
-                          width: 150,
-                          height: 50,
-                          decoration: BoxDecoration(
-                          color: Colors.purple,
-                          borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Center(child: Text("Start Quiz",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),))),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-              height: 20,
-            ),
-            
+                )
+              
             ],
           ),
         ),
@@ -438,4 +359,46 @@ buildcarouselindicator() {
     ],
   );
 }
+}
+
+Widget buildCategoryCard(String categoryName,String categoryDuration,String categoryQuestions, Icon categoryIcon,  VoidCallback onTap) {
+  return Container(
+    width: double.infinity,
+    height: 120,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(15),
+      color: Colors.white,
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black26,
+          blurRadius: 4,
+          offset: Offset(2, 4),
+        ),
+      ],
+    ),
+    child: Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: categoryIcon,
+        ),
+
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(categoryName,style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.purple,),),
+              SizedBox(height: 3),
+              Text(categoryDuration,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.purple,),),
+              Text(categoryQuestions,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w400,color: Colors.purple,),),
+              // SizedBox(height: 10),
+              
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }
