@@ -16,10 +16,23 @@ int currentPage =0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: ElevatedButton(
-        iconAlignment: IconAlignment.start,
-        
-        child: Text("Join with code", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.purple),) ,onPressed: (){}),
+      floatingActionButton: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.purple,
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
+        icon: Icon(Icons.qr_code_2_rounded, color: Colors.white),
+        label: Text(
+          "Join with code",
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white),
+        ),
+        onPressed: () {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Quizcode()));
+        },
+      ),
       appBar: AppBar(
         title: 
         Text("Khelega Quiz??",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.white),),
