@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:quizsutra/apiservices.dart';
+import 'package:quizsutra/leaderboard/resultscreen.dart';
 
 class Quizscreen extends StatefulWidget {
   const Quizscreen({super.key});
@@ -32,8 +33,12 @@ class _QuizscreenState extends State<Quizscreen> {
   late Future quiz;
   var currentQuestionindex =0;
   var isloaded =false;
-
   var optionsList =[];
+  // var totalquestions = snapshot.data[0]
+  bool isSubmitted = false;
+  bool optiontapped = false;
+
+  int score =0;
 
   startTimer(){
     timer = Timer.periodic(Duration (seconds: 1), (timer){
@@ -56,6 +61,15 @@ class _QuizscreenState extends State<Quizscreen> {
     });
   }
 
+  submitbtn() async{
+
+    setState(() {
+    timer!.cancel();
+    isSubmitted =true;
+    });
+    await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score)));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,128 +77,197 @@ class _QuizscreenState extends State<Quizscreen> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              Center(
-                child: Center(
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                       Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("$minutes : $seconds", style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
-                          Text("min", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w500),),
-                        ],
-                      ),
-                     
-                    Container(
-                      width: 150,
-                      height: 150,
-                      child: CircularProgressIndicator(
-                        value: seconds/60,
-                        valueColor: AlwaysStoppedAnimation(Colors.white),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Center(
+                  child: Center(
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                         Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("$minutes : $seconds", style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
+                            Text("min", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w500),),
+                          ],
+                        ),
+                       
+                      Container(
+                        width: 150,
+                        height: 150,
+                        child: CircularProgressIndicator(
+                          value: seconds/60,
+                          valueColor: AlwaysStoppedAnimation(Colors.white),
+                          strokeWidth: 8,
+                        ),
+                        
                       ),
                       
+                      ],
+                      
                     ),
-                    
-                    ],
-                    
                   ),
                 ),
-              ),
-              SizedBox(height: 40,),
-
-              Container(
-                width: double.infinity,
-                // color: Colors.amber,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FutureBuilder(
-                    
-                    future: quiz, 
-                    builder: (BuildContext context , AsyncSnapshot snapshot){
-                      if( snapshot.hasData){
-
-                        var quizData = snapshot.data[0];
-                        var questions = quizData["questions"];
-
-                        if(isloaded==false){
-                          optionsList = questions[currentQuestionindex]["options"];
-
-
-
-                          isloaded =true;    
-
-                        }
-
-                        return SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                    
-                         Text("Question ${currentQuestionindex + 1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
-                         SizedBox(height: 10,),
-                                  
-                                  Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                 border: Border.all(color: Colors.white),
-                                 // borderRadius: BorderRadius.circular(8),
-                                 // boxShadow: [BoxShadow(color: Colors.black26,)],
-                                ),
-                               child: Padding(
-                                 padding: const EdgeInsets.all(8.0),
-                                 child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
-                               ),
-                              ),
-                    
-                              SizedBox(height: 40,),
-                              
-                              ListView.builder(
-                                shrinkWrap: true,
-                                itemCount: optionsList.length,
-                                itemBuilder: (BuildContext context, int index){
-
-                                  return Padding(
-                                    padding: const EdgeInsets.only(bottom: 10),
-                                    child: Container(
-                                           width: double.infinity,
-                                                                    
-                                          decoration: BoxDecoration(
-                                         
-                                        color:Color.fromARGB(255, 114, 20, 131),
-                                        borderRadius: BorderRadius.circular(18)
-                                         ),
-                                        child: Center(child: Padding(
-                                    padding: const EdgeInsets.symmetric(vertical: 15),
-                                    child: Text(questions[currentQuestionindex]["options"][index] ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
-                                      )),
+                SizedBox(height: 40,),
+            
+                Container(
+                  width: double.infinity,
+                  // color: Colors.amber,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: FutureBuilder(
+                      
+                      future: quiz, 
+                      builder: (BuildContext context , AsyncSnapshot snapshot){
+                        if( snapshot.hasData){
+            
+                          var quizData = snapshot.data[0];
+                          var questions = quizData["questions"];
+            
+                          if(isloaded==false){
+                            optionsList = questions[currentQuestionindex]["options"];
+            
+            
+            
+                            isloaded =true;    
+            
+                          }
+            
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                          
+                               Text("Question ${currentQuestionindex + 1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
+                               SizedBox(height: 10,),
+                                        
+                                        Container(
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                       border: Border.all(color: Colors.white),
+                                       // borderRadius: BorderRadius.circular(8),
+                                       // boxShadow: [BoxShadow(color: Colors.black26,)],
+                                      ),
+                                     child: Padding(
+                                       padding: const EdgeInsets.all(8.0),
+                                       child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
                                      ),
-                                  );
-
-                                }                                
-                                ),
-                                                                                       
-                      ],
-                    ),
-                  );
-                      }
-
-                      else{
-
-                        return Center( child:  CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation(Colors.white),
-                        ),);
-
-                      }
-                    },
-                    
-                    )
+                                    ),
+                          
+                                    SizedBox(height: 40,),
+                                    
+                                    ListView.builder(
+                                      shrinkWrap: true,
+                                      itemCount: optionsList.length,
+                                      itemBuilder: (BuildContext context, int index){
+                                      
+                                        return Padding(
+                                          padding: const EdgeInsets.only(bottom: 10),
+                                          child: InkWell(
+                                            onTap: () {
+                                              setState(() {
+                                                
+                                                if(optionsList[index]==questions[currentQuestionindex]["correctAnswer"]){
+                                                score++;
+                                              }
+                                              optiontapped = true;
+                                              });
+                                              
+                                            },
+                                            child: Container(
+                                                   width: double.infinity,
+                                                                            
+                                                  decoration: BoxDecoration(
+                                                 
+                                                // color:optiontapped?  Color.fromARGB(255, 114, 20, 131): Colors.purple[50],
+                                                color: Color.fromARGB(255, 114, 20, 131),
+                                                borderRadius: BorderRadius.circular(18)
+                                                 ),
+                                                child: Center(child: Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: 15),
+                                            child: Text(questions[currentQuestionindex]["options"][index] ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
+                                              )),
+                                             ),
+                                          ),
+                                        );
+                                      
+                                      }                                
+                                      ),
+                                                                                             
+                            ],
+                          );
+                        }
+            
+                        else{
+            
+                          return Center( child:  CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation(Colors.white),
+                          ),);
+            
+                        }
+                      },
+                      
+                      )
+                  ),
                 ),
-              ),
-                       
-            ],
+                SizedBox(height: 20,),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        if (currentQuestionindex > 0) {
+                                setState(() {
+                                  currentQuestionindex--;
+                                });
+                              }
+                      
+                      },
+                      child: Container(
+                        width: 150,
+                        height: 45,
+                        decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(60)
+                      
+                        ),
+                        child: Center(child: Text("Previous",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),)),
+                      
+                      ),
+                    ),
+
+                    GestureDetector(
+                      onTap: () {
+                         if (currentQuestionindex < 9) {
+                                setState(() {
+                                  currentQuestionindex++;
+                                  isloaded = false;
+                                });
+                              }
+                          else{
+                            submitbtn();
+                          }    
+                        
+                      },
+                      child: Container(
+                        width: 150,
+                        height: 45,
+                        decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(60)
+                      
+                        ),
+                        child: Center(child: Text(currentQuestionindex!=9?"Next": "submit",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),)),
+                      
+                      ),
+                    ),
+                    
+                  ],
+                ),
+                         
+              ],
+            ),
           ),
         ),
       ),
