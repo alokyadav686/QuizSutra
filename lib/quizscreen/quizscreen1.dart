@@ -32,12 +32,12 @@ class _QuizscreenState extends State<Quizscreen> {
   Timer? timer;
   late Future quiz;
   var currentQuestionindex =0;
-  var isloaded =false;
-  var optionsList =[];
+  // var isloaded =false;
+  // var optionsList =[];
+  List<String> selectedAnswers = [];
   // var totalquestions = snapshot.data[0]
   bool isSubmitted = false;
-  bool optiontapped = false;
-
+  // bool optiontapped = false;
   int score =0;
 
   startTimer(){
@@ -61,13 +61,34 @@ class _QuizscreenState extends State<Quizscreen> {
     });
   }
 
-  submitbtn() async{
+  submitbtn() {
 
     setState(() {
     timer!.cancel();
     isSubmitted =true;
+
+    score =0;
+    quiz.then((data){
+      var questions= data[0]["question"];
+      
+      for(int i= 0;i<questions.length; i++){
+        if(selectedAnswers[i]==questions[i]["correctAnswer"]){
+          score+=25;
+        }
+      }
+
     });
-    await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score)));
+    });
+    
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score)));
+  }
+
+   onOptionSelected(String answer) {
+    if (!isSubmitted) {
+      setState(() {
+        selectedAnswers[currentQuestionindex] = answer;
+      });
+    }
   }
 
   @override
@@ -123,22 +144,22 @@ class _QuizscreenState extends State<Quizscreen> {
                           
                           
                         ),
-                        Container(
-                           width: 150,
-                          height: 150,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(80),
-                            // color: Colors.white54
+                        // Container(
+                        //    width: 150,
+                        //   height: 150,
+                        //   decoration: BoxDecoration(
+                        //     borderRadius: BorderRadius.circular(80),
+                        //     // color: Colors.white54
 
-                            border: Border.all(
-                             color: Colors.white38, // Border color
-                                   width: 4, // Border width
-                             ),
+                        //     border: Border.all(
+                        //      color: Colors.white38, // Border color
+                        //            width: 4, // Border width
+                        //      ),
                             
-                          ),
+                        //   ),
 
 
-                        ),
+                        // ),
                       
                         ]
                       ),
@@ -159,20 +180,28 @@ class _QuizscreenState extends State<Quizscreen> {
                       
                       future: quiz, 
                       builder: (BuildContext context , AsyncSnapshot snapshot){
+                        if (snapshot.connectionState == ConnectionState.waiting) {
+                          return Center(
+                              child: CircularProgressIndicator(
+                                  valueColor: AlwaysStoppedAnimation(Colors.white)));
+                        }
                         if( snapshot.hasData){
             
                           var quizData = snapshot.data[0];
                           var questions = quizData["questions"];
+
+                          if (selectedAnswers.length < questions.length) {
+                            selectedAnswers = List.generate(
+                                questions.length, (index) => '');
+                          }
             
-                          if(isloaded==false){
-                            optionsList = questions[currentQuestionindex]["options"];
+                          // if(isloaded==false){
+                          //   optionsList = questions[currentQuestionindex]["options"];
             
-            
-            
-                            isloaded =true;    
+                          //   isloaded =true;    
                             
             
-                          }
+                          // }
             
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -199,21 +228,16 @@ class _QuizscreenState extends State<Quizscreen> {
                                     
                                     ListView.builder(
                                       shrinkWrap: true,
-                                      itemCount: optionsList.length,
+                                      itemCount: questions[currentQuestionindex]["options"].length,
                                       itemBuilder: (BuildContext context, int index){
+                                        var option = questions[currentQuestionindex]["options"][index];
+                                         bool isSelected = selectedAnswers[currentQuestionindex] == option;
                                       
                                         return Padding(
                                           padding: const EdgeInsets.only(bottom: 10),
                                           child: InkWell(
                                             onTap: () {
-                                              setState(() {
-                                                
-                                                if(optionsList[index]==questions[currentQuestionindex]["correctAnswer"]){
-                                                score++;
-                                              }
-                                              optiontapped = true;
-                                              });
-                                              
+                                              onOptionSelected(option);
                                             },
                                             child: Container(
                                                    width: double.infinity,
@@ -221,17 +245,17 @@ class _QuizscreenState extends State<Quizscreen> {
                                                   decoration: BoxDecoration(
                                                  
                                                 // color:optiontapped?  Color.fromARGB(255, 114, 20, 131): Colors.purple[50],
-                                                color: const Color.fromARGB(255, 30, 29, 30),
+                                                // color: const Color.fromARGB(255, 30, 29, 30),
+                                                color: isSelected ? Colors.black:Colors.black38,
                                                 borderRadius: BorderRadius.circular(18)
                                                  ),
                                                 child: Center(child: Padding(
                                             padding: const EdgeInsets.symmetric(vertical: 15),
-                                            child: Text(questions[currentQuestionindex]["options"][index] ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
+                                            child: Text(option ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
                                               )),
                                              ),
                                           ),
                                         );
-                                      
                                       }                                
                                       ),
                                                                                              
@@ -257,13 +281,12 @@ class _QuizscreenState extends State<Quizscreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
-                      onTap: () {
-                        if (currentQuestionindex > 0) {
-                                setState(() {
-                                  currentQuestionindex--;
-                                });
-                              }
-                      
+                      onTap: currentQuestionindex ==0 ? null: (){
+                          setState(() {
+                            
+                            currentQuestionindex--;
+                          });            
+                                             
                       },
                       child: Container(
                         width: 150,
@@ -283,8 +306,8 @@ class _QuizscreenState extends State<Quizscreen> {
                          if (currentQuestionindex < 9) {
                                 setState(() {
                                   currentQuestionindex++;
-                                  isloaded = false;
-                                  optiontapped=false;
+                                  // isloaded = false;
+                                  // optiontapped=false;
                                 });
                               }
                           else{

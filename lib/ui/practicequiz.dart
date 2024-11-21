@@ -45,7 +45,7 @@ int currentPage =0;
         backgroundColor: Colors.purple,
       ),
       drawer: Drawer(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.purple,        
         child: Column(
           
           crossAxisAlignment: CrossAxisAlignment.start,
