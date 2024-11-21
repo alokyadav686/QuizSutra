@@ -121,7 +121,7 @@ class _Quizscreen3State extends State<Quizscreen3> {
                       builder: (BuildContext context , AsyncSnapshot snapshot){
                         if( snapshot.hasData){
             
-                          var quizData = snapshot.data[0];
+                          var quizData = snapshot.data[2];
                           var questions = quizData["questions"];
             
                           if(isloaded==false){

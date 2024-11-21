@@ -93,15 +93,54 @@ class _QuizscreenState extends State<Quizscreen> {
                           ],
                         ),
                        
-                      Container(
-                        width: 150,
-                        height: 150,
-                        child: CircularProgressIndicator(
-                          value: seconds/60,
-                          valueColor: AlwaysStoppedAnimation(Colors.white),
-                          strokeWidth: 8,
+                      Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5,left: 5),
+                            child: Container(
+                            width: 140,
+                            height: 140,
+                            child: CircularProgressIndicator(
+                              value: seconds/60,
+                              valueColor: AlwaysStoppedAnimation(Colors.white),
+                              strokeWidth: 8,
+                              
+                            ),
+                            
+                            
+                                                    ),
+                          ),
+                        Container(
+                          width: 150,
+                          height: 150,
+                          child: CircularProgressIndicator(
+                            value: minutes/30,
+                            valueColor: AlwaysStoppedAnimation(Colors.white),
+                            strokeWidth: 8,
+                            
+                          ),
+                          
+                          
+                          
                         ),
-                        
+                        Container(
+                           width: 150,
+                          height: 150,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(80),
+                            // color: Colors.white54
+
+                            border: Border.all(
+                             color: Colors.white38, // Border color
+                                   width: 4, // Border width
+                             ),
+                            
+                          ),
+
+
+                        ),
+                      
+                        ]
                       ),
                       
                       ],
@@ -245,6 +284,7 @@ class _QuizscreenState extends State<Quizscreen> {
                                 setState(() {
                                   currentQuestionindex++;
                                   isloaded = false;
+                                  optiontapped=false;
                                 });
                               }
                           else{

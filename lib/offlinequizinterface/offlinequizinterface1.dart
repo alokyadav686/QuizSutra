@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizsutra/quizscreen/quizscreen.dart';
+import 'package:quizsutra/quizscreen/quizscreen1.dart';
 
 class Offlinequizinterface1 extends StatefulWidget {
   const Offlinequizinterface1({super.key});
