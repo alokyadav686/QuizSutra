@@ -20,8 +20,8 @@ class _QuizcodeState extends State<Quizcode> {
           width: double.infinity,
           // height: double.infinity,
           height: MediaQuery.of(context).size.height ,
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/bg.png"),fit: BoxFit.cover)),
-        
+          // decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/bg.png"),fit: BoxFit.cover)),
+          color: Colors.purple,
           child: Padding(
             padding: const EdgeInsets.only(top: 100, left: 20, right: 20, bottom: 60),
             child: Container(

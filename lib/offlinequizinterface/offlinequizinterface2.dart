@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizsutra/quizscreen/quizscreen2.dart';
 
 class Offlinequizinterface2 extends StatefulWidget {
   const Offlinequizinterface2({super.key});
@@ -110,7 +111,7 @@ class _Offlinequizinterface2State extends State<Offlinequizinterface2> {
 
                 InkWell(
                   onTap: () {
-                    
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Quizscreen2()));
                     
                   },
                   child: Container(

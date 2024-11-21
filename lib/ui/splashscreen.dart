@@ -33,7 +33,7 @@ class _SplashscreenState extends State<Splashscreen> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/images/splashh.png"),fit: BoxFit.cover)
+          image: DecorationImage(image: AssetImage("assets/images/splashbest.png"),fit: BoxFit.cover)
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

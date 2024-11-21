@@ -4,16 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:quizsutra/apiservices.dart';
 import 'package:quizsutra/leaderboard/resultscreen.dart';
 
-class Quizscreen extends StatefulWidget {
-  const Quizscreen({super.key});
+class Quizscreen3 extends StatefulWidget {
+  const Quizscreen3({super.key});
 
   @override
-  State<Quizscreen> createState() => _QuizscreenState();
+  State<Quizscreen3> createState() => _Quizscreen3State();
 }
 
-class _QuizscreenState extends State<Quizscreen> {
-
-  @override
+class _Quizscreen3State extends State<Quizscreen3> {
+ @override
   void initState() {
     
     super.initState();
@@ -276,22 +275,3 @@ class _QuizscreenState extends State<Quizscreen> {
     );
   }
 }
-
-// Widget options( String optiontxt,VoidCallback ontap){
-//   return InkWell(
-//     onTap: ontap,
-//     child: Container(
-//                                 width: double.infinity,
-//                                 // height: 50,
-//                                 decoration: BoxDecoration(
-//                                 // color: Colors.amber,
-//                                  color:Color.fromARGB(255, 114, 20, 131),
-//                                 borderRadius: BorderRadius.circular(18)
-//                                 ),
-//                                 child: Center(child: Padding(
-//                                   padding: const EdgeInsets.symmetric(vertical: 15),
-//                                   child: Text(optiontxt ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
-//                                 )),
-//                               ),
-//   );
-// }

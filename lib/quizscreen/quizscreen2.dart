@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:quizsutra/apiservices.dart';
 import 'package:quizsutra/leaderboard/resultscreen.dart';
 
-class Quizscreen extends StatefulWidget {
-  const Quizscreen({super.key});
+class Quizscreen2 extends StatefulWidget {
+  const Quizscreen2({super.key});
 
   @override
-  State<Quizscreen> createState() => _QuizscreenState();
+  State<Quizscreen2> createState() => _Quizscreen2State();
 }
 
-class _QuizscreenState extends State<Quizscreen> {
-
+class _Quizscreen2State extends State<Quizscreen2> {
   @override
   void initState() {
     
@@ -122,7 +121,7 @@ class _QuizscreenState extends State<Quizscreen> {
                       builder: (BuildContext context , AsyncSnapshot snapshot){
                         if( snapshot.hasData){
             
-                          var quizData = snapshot.data[0];
+                          var quizData = snapshot.data[1];
                           var questions = quizData["questions"];
             
                           if(isloaded==false){
@@ -276,22 +275,3 @@ class _QuizscreenState extends State<Quizscreen> {
     );
   }
 }
-
-// Widget options( String optiontxt,VoidCallback ontap){
-//   return InkWell(
-//     onTap: ontap,
-//     child: Container(
-//                                 width: double.infinity,
-//                                 // height: 50,
-//                                 decoration: BoxDecoration(
-//                                 // color: Colors.amber,
-//                                  color:Color.fromARGB(255, 114, 20, 131),
-//                                 borderRadius: BorderRadius.circular(18)
-//                                 ),
-//                                 child: Center(child: Padding(
-//                                   padding: const EdgeInsets.symmetric(vertical: 15),
-//                                   child: Text(optiontxt ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
-//                                 )),
-//                               ),
-//   );
-// }
