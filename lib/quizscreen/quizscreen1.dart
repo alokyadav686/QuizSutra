@@ -64,29 +64,37 @@ class _QuizscreenState extends State<Quizscreen> {
   submitbtn() {
 
     setState(() {
-    timer!.cancel();
+    timer?.cancel();
     isSubmitted =true;
-
     score =0;
+
     quiz.then((data){
-      var questions= data[0]["question"];
+      var questions= data[0]["questions"];
       
       for(int i= 0;i<questions.length; i++){
         if(selectedAnswers[i]==questions[i]["correctAnswer"]){
           score+=25;
+          print("true $score");
         }
       }
 
     });
-    });
-    
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score)));
-  }
 
-   onOptionSelected(String answer) {
+    
+    
+    
+    print("Final Score: $score");
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score,)));
+    });
+  }
+  
+
+    onOptionSelected(String answer) {
     if (!isSubmitted) {
       setState(() {
         selectedAnswers[currentQuestionindex] = answer;
+        print("selected option ${selectedAnswers[currentQuestionindex] = answer}");
+        print("selected option ${selectedAnswers}");
       });
     }
   }
@@ -128,8 +136,7 @@ class _QuizscreenState extends State<Quizscreen> {
                               
                             ),
                             
-                            
-                                                    ),
+                            ),
                           ),
                         Container(
                           width: 150,
@@ -195,6 +202,7 @@ class _QuizscreenState extends State<Quizscreen> {
                                 questions.length, (index) => '');
                           }
             
+
                           // if(isloaded==false){
                           //   optionsList = questions[currentQuestionindex]["options"];
             
@@ -239,12 +247,16 @@ class _QuizscreenState extends State<Quizscreen> {
                                       itemBuilder: (BuildContext context, int index){
                                         var option = questions[currentQuestionindex]["options"][index];
                                          bool isSelected = selectedAnswers[currentQuestionindex] == option;
+
                                       
                                         return Padding(
                                           padding: const EdgeInsets.only(bottom: 10),
                                           child: InkWell(
                                             onTap: () {
+
                                               onOptionSelected(option);
+
+                                              print("firstdebug ${option}");
                                             },
                                             child: Container(
                                                    width: double.infinity,

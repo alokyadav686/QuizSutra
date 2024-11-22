@@ -12,7 +12,7 @@ class Quizscreen3 extends StatefulWidget {
 }
 
 class _Quizscreen3State extends State<Quizscreen3> {
- @override
+@override
   void initState() {
     
     super.initState();
@@ -31,12 +31,12 @@ class _Quizscreen3State extends State<Quizscreen3> {
   Timer? timer;
   late Future quiz;
   var currentQuestionindex =0;
-  var isloaded =false;
-  var optionsList =[];
+  // var isloaded =false;
+  // var optionsList =[];
+  List<String> selectedAnswers = [];
   // var totalquestions = snapshot.data[0]
   bool isSubmitted = false;
-  bool optiontapped = false;
-
+  // bool optiontapped = false;
   int score =0;
 
   startTimer(){
@@ -60,13 +60,39 @@ class _Quizscreen3State extends State<Quizscreen3> {
     });
   }
 
-  submitbtn() async{
+  submitbtn() {
 
     setState(() {
-    timer!.cancel();
+    timer?.cancel();
     isSubmitted =true;
+    score =0;
+
+    quiz.then((data){
+      var questions= data[2]["questions"];
+      
+      for(int i= 0;i<questions.length; i++){
+        if(selectedAnswers[i]==questions[i]["correctAnswer"]){
+          score+=25;
+          print("true $score");
+        }
+      }
+
     });
-    await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score)));
+    
+    
+    print("Final Score: $score");
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score)));
+    });
+  }
+
+    onOptionSelected(String answer) {
+    if (!isSubmitted) {
+      setState(() {
+        selectedAnswers[currentQuestionindex] = answer;
+        print("selected option ${selectedAnswers[currentQuestionindex] = answer}");
+        print("selected option ${selectedAnswers}");
+      });
+    }
   }
 
   @override
@@ -92,15 +118,53 @@ class _Quizscreen3State extends State<Quizscreen3> {
                           ],
                         ),
                        
-                      Container(
-                        width: 150,
-                        height: 150,
-                        child: CircularProgressIndicator(
-                          value: seconds/60,
-                          valueColor: AlwaysStoppedAnimation(Colors.white),
-                          strokeWidth: 8,
+                      Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5,left: 5),
+                            child: Container(
+                            width: 140,
+                            height: 140,
+                            child: CircularProgressIndicator(
+                              value: seconds/60,
+                              valueColor: AlwaysStoppedAnimation(Colors.white),
+                              strokeWidth: 8,
+                              
+                            ),
+                            
+                            ),
+                          ),
+                        Container(
+                          width: 150,
+                          height: 150,
+                          child: CircularProgressIndicator(
+                            value: minutes/30,
+                            valueColor: AlwaysStoppedAnimation(Colors.white),
+                            strokeWidth: 8,
+                            
+                          ),
+                          
+                          
+                          
                         ),
-                        
+                        // Container(
+                        //    width: 150,
+                        //   height: 150,
+                        //   decoration: BoxDecoration(
+                        //     borderRadius: BorderRadius.circular(80),
+                        //     // color: Colors.white54
+
+                        //     border: Border.all(
+                        //      color: Colors.white38, // Border color
+                        //            width: 4, // Border width
+                        //      ),
+                            
+                        //   ),
+
+
+                        // ),
+                      
+                        ]
                       ),
                       
                       ],
@@ -119,20 +183,29 @@ class _Quizscreen3State extends State<Quizscreen3> {
                       
                       future: quiz, 
                       builder: (BuildContext context , AsyncSnapshot snapshot){
+                        if (snapshot.connectionState == ConnectionState.waiting) {
+                          return Center(
+                              child: CircularProgressIndicator(
+                                  valueColor: AlwaysStoppedAnimation(Colors.white)));
+                        }
                         if( snapshot.hasData){
             
                           var quizData = snapshot.data[2];
                           var questions = quizData["questions"];
+
+                          if (selectedAnswers.length < questions.length) {
+                            selectedAnswers = List.generate(
+                                questions.length, (index) => '');
+                          }
             
-                          if(isloaded==false){
-                            optionsList = questions[currentQuestionindex]["options"];
+
+                          // if(isloaded==false){
+                          //   optionsList = questions[currentQuestionindex]["options"];
             
-            
-            
-                            isloaded =true;    
+                          //   isloaded =true;    
                             
             
-                          }
+                          // }
             
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -141,39 +214,45 @@ class _Quizscreen3State extends State<Quizscreen3> {
                                Text("Question ${currentQuestionindex + 1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
                                SizedBox(height: 10,),
                                         
-                                        Container(
-                                      width: double.infinity,
-                                      decoration: BoxDecoration(
-                                       border: Border.all(color: Colors.white),
-                                       color: Colors.black26
-                                       // borderRadius: BorderRadius.circular(8),
-                                       // boxShadow: [BoxShadow(color: Colors.black26,)],
-                                      ),
-                                     child: Padding(
-                                       padding: const EdgeInsets.all(8.0),
-                                       child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
-                                     ),
-                                    ),
+                                        SizedBox(
+                                          height: 120,
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                                                    width: double.infinity,
+                                                                                    decoration: BoxDecoration(
+                                                                                     border: Border.all(color: Colors.white),
+                                                                                     color: Colors.black26
+                                                                                     // borderRadius: BorderRadius.circular(8),
+                                                                                     // boxShadow: [BoxShadow(color: Colors.black26,)],
+                                                                                    ),
+                                                                                   child: Padding(
+                                                                                     padding: const EdgeInsets.all(8.0),
+                                                                                     child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
+                                                                                   ),
+                                                                                  ),
+                                            ],
+                                          ),
+                                        ),
                           
                                     SizedBox(height: 40,),
                                     
                                     ListView.builder(
                                       shrinkWrap: true,
-                                      itemCount: optionsList.length,
+                                      itemCount: questions[currentQuestionindex]["options"].length,
                                       itemBuilder: (BuildContext context, int index){
+                                        var option = questions[currentQuestionindex]["options"][index];
+                                         bool isSelected = selectedAnswers[currentQuestionindex] == option;
+
                                       
                                         return Padding(
                                           padding: const EdgeInsets.only(bottom: 10),
                                           child: InkWell(
                                             onTap: () {
-                                              setState(() {
-                                                
-                                                if(optionsList[index]==questions[currentQuestionindex]["correctAnswer"]){
-                                                score++;
-                                              }
-                                              optiontapped = true;
-                                              });
-                                              
+
+                                              onOptionSelected(option);
+
+                                              print("firstdebug ${option}");
                                             },
                                             child: Container(
                                                    width: double.infinity,
@@ -181,17 +260,17 @@ class _Quizscreen3State extends State<Quizscreen3> {
                                                   decoration: BoxDecoration(
                                                  
                                                 // color:optiontapped?  Color.fromARGB(255, 114, 20, 131): Colors.purple[50],
-                                                color: const Color.fromARGB(255, 30, 29, 30),
+                                                // color: const Color.fromARGB(255, 30, 29, 30),
+                                                color: isSelected ? Colors.black:Colors.black38,
                                                 borderRadius: BorderRadius.circular(18)
                                                  ),
                                                 child: Center(child: Padding(
                                             padding: const EdgeInsets.symmetric(vertical: 15),
-                                            child: Text(questions[currentQuestionindex]["options"][index] ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
+                                            child: Text(option ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
                                               )),
                                              ),
                                           ),
                                         );
-                                      
                                       }                                
                                       ),
                                                                                              
@@ -217,13 +296,12 @@ class _Quizscreen3State extends State<Quizscreen3> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
-                      onTap: () {
-                        if (currentQuestionindex > 0) {
-                                setState(() {
-                                  currentQuestionindex--;
-                                });
-                              }
-                      
+                      onTap: currentQuestionindex ==0 ? null: (){
+                          setState(() {
+                            
+                            currentQuestionindex--;
+                          });            
+                                             
                       },
                       child: Container(
                         width: 150,
@@ -243,7 +321,8 @@ class _Quizscreen3State extends State<Quizscreen3> {
                          if (currentQuestionindex < 9) {
                                 setState(() {
                                   currentQuestionindex++;
-                                  isloaded = false;
+                                  // isloaded = false;
+                                  // optiontapped=false;
                                 });
                               }
                           else{
