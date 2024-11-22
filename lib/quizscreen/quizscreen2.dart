@@ -105,7 +105,14 @@ class _Quizscreen2State extends State<Quizscreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple,
+     backgroundColor: Colors.purple,
+      appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.purple,
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.purple,
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -120,40 +127,25 @@ class _Quizscreen2State extends State<Quizscreen2> {
                          Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("$minutes : $seconds", style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
-                            Text("min", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w500),),
+                            Text("$minutes : $seconds", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
+                            Text("min", style: TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w500),),
                           ],
                         ),
                        
                       Stack(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5,left: 5),
-                            child: Container(
-                            width: 140,
-                            height: 140,
-                            child: CircularProgressIndicator(
-                              value: seconds/60,
-                              valueColor: AlwaysStoppedAnimation(Colors.white),
-                              strokeWidth: 8,
-                              
-                            ),
-                            
-                            ),
-                          ),
-                        Container(
-                          width: 150,
-                          height: 150,
+                          Container(
+                          width: 110,
+                          height: 110,
                           child: CircularProgressIndicator(
-                            value: minutes/30,
+                            value: seconds/60,
                             valueColor: AlwaysStoppedAnimation(Colors.white),
                             strokeWidth: 8,
                             
                           ),
                           
-                          
-                          
-                        ),
+                          ),
+                       
                         // Container(
                         //    width: 150,
                         //   height: 150,

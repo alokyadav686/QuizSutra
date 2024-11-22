@@ -107,6 +107,45 @@ class _QuizscreenState extends State<Quizscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.purple,
+      appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.purple,
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.purple,
+
+        child: Column(
+          children: [
+
+            Spacer(),
+
+             Padding(
+              padding: const EdgeInsets.only(left: 6.0),
+              child: InkWell(
+                onTap: () {
+                  // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Quizcode()));
+                  
+                },
+                child: Container(
+                  height: 30,
+                  width: double.infinity,
+                  // color: Colors.black,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 50,
+                        child: Icon(Icons.cancel_presentation_sharp,color: Colors.white,)),
+                          Text("Quit",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),)
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 20,),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -121,40 +160,25 @@ class _QuizscreenState extends State<Quizscreen> {
                          Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("$minutes : $seconds", style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
-                            Text("min", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w500),),
+                            Text("$minutes : $seconds", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
+                            Text("min", style: TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w500),),
                           ],
                         ),
                        
                       Stack(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5,left: 5),
-                            child: Container(
-                            width: 140,
-                            height: 140,
-                            child: CircularProgressIndicator(
-                              value: seconds/60,
-                              valueColor: AlwaysStoppedAnimation(Colors.white),
-                              strokeWidth: 8,
-                              
-                            ),
-                            
-                            ),
-                          ),
-                        Container(
-                          width: 150,
-                          height: 150,
+                          Container(
+                          width: 110,
+                          height: 110,
                           child: CircularProgressIndicator(
-                            value: minutes/30,
+                            value: seconds/60,
                             valueColor: AlwaysStoppedAnimation(Colors.white),
                             strokeWidth: 8,
                             
                           ),
                           
+                          ),
                           
-                          
-                        ),
                         // Container(
                         //    width: 150,
                         //   height: 150,

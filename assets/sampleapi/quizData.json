@@ -274,5 +274,214 @@
         "difficulty": "Hard"
       }
     ]
-  }
+  },
+  {
+    "quizKey": "quiz_ssc_cgl_math_pyqs",
+    "adminID": "admin123",
+    "status": true,
+    "quizTitle": "SSC CGL Mathematics PYQs",
+    "questions": [
+        {
+            "quesKey": "1",
+            "question": "If the cost price of 15 articles is equal to the selling price of 12 articles, what is the profit percentage?",
+            "options": ["20%", "25%", "30%", "33.33%"],
+            "correctAnswer": "25%",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "2",
+            "question": "A train running at 54 km/hr takes 20 seconds to cross a platform 150 meters long. What is the length of the train?",
+            "options": ["200 m", "250 m", "300 m", "350 m"],
+            "correctAnswer": "200 m",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "3",
+            "question": "The HCF of two numbers is 16, and their LCM is 240. If one of the numbers is 48, find the other number.",
+            "options": ["80", "120", "60", "100"],
+            "correctAnswer": "80",
+            "category": "Mathematics",
+            "difficulty": "Easy"
+        },
+        {
+            "quesKey": "4",
+            "question": "What is the unit digit of 7^95?",
+            "options": ["1", "3", "7", "9"],
+            "correctAnswer": "3",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "5",
+            "question": "If the radius of a cylinder is halved and its height is doubled, what will be the ratio of the new volume to the original volume?",
+            "options": ["1:2", "1:4", "2:1", "4:1"],
+            "correctAnswer": "1:2",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "6",
+            "question": "Find the area of a triangle with sides 13 cm, 14 cm, and 15 cm.",
+            "options": ["84 cm²", "91 cm²", "98 cm²", "100 cm²"],
+            "correctAnswer": "84 cm²",
+            "category": "Mathematics",
+            "difficulty": "Tough"
+        },
+        {
+            "quesKey": "7",
+            "question": "If sin A = 3/5, find cos A.",
+            "options": ["4/5", "3/4", "5/3", "5/4"],
+            "correctAnswer": "4/5",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "8",
+            "question": "A shopkeeper allows a discount of 20% on the marked price of an article and still makes a profit of 25%. What is the cost price of the article if the marked price is ₹500?",
+            "options": ["₹300", "₹320", "₹350", "₹400"],
+            "correctAnswer": "₹320",
+            "category": "Mathematics",
+            "difficulty": "Tough"
+        },
+        {
+            "quesKey": "9",
+            "question": "The average of 20 numbers is zero. Of these, at most, how many may be greater than zero?",
+            "options": ["20", "10", "19", "0"],
+            "correctAnswer": "19",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "10",
+            "question": "If the difference between simple interest and compound interest on a sum of ₹10,000 for 2 years at 5% per annum is:",
+            "options": ["₹25", "₹50", "₹75", "₹100"],
+            "correctAnswer": "₹25",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "11",
+            "question": "A man can row 30 km downstream in 2 hours and returns in 3 hours. What is the speed of the stream?",
+            "options": ["2 km/hr", "3 km/hr", "4 km/hr", "5 km/hr"],
+            "correctAnswer": "3 km/hr",
+            "category": "Mathematics",
+            "difficulty": "Tough"
+        },
+        {
+            "quesKey": "12",
+            "question": "The length of a rectangle is increased by 20% and the breadth is decreased by 10%. What is the percentage change in the area?",
+            "options": ["8% increase", "8% decrease", "10% increase", "10% decrease"],
+            "correctAnswer": "8% increase",
+            "category": "Mathematics",
+            "difficulty": "Tough"
+        },
+        {
+            "quesKey": "13",
+            "question": "A sum of ₹12,000 amounts to ₹13,200 in 2 years at simple interest. What is the rate of interest per annum?",
+            "options": ["5%", "8%", "10%", "12%"],
+            "correctAnswer": "5%",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "14",
+            "question": "If the area of a circle is 616 cm², find its circumference.",
+            "options": ["88 cm", "96 cm", "80 cm", "84 cm"],
+            "correctAnswer": "88 cm",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "15",
+            "question": "If the difference between a two-digit number and the number obtained by interchanging its digits is 36, what is the sum of the digits?",
+            "options": ["8", "9", "10", "12"],
+            "correctAnswer": "12",
+            "category": "Mathematics",
+            "difficulty": "Tough"
+        },
+        {
+            "quesKey": "16",
+            "question": "A pipe can fill a tank in 12 hours, while another pipe can empty it in 20 hours. If both are opened together, how long will it take to fill the tank?",
+            "options": ["30 hours", "40 hours", "24 hours", "20 hours"],
+            "correctAnswer": "30 hours",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "17",
+            "question": "If 4x² - 9 = 0, find the value of x.",
+            "options": ["3/2", "2/3", "4", "-3/2"],
+            "correctAnswer": "3/2",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "18",
+            "question": "The average of 6 consecutive even numbers is 25. Find the largest number.",
+            "options": ["30", "32", "28", "26"],
+            "correctAnswer": "30",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "19",
+            "question": "The ratio of milk to water in 60 liters of mixture is 2:1. How much water should be added to make the ratio 1:1?",
+            "options": ["10 liters", "20 liters", "15 liters", "25 liters"],
+            "correctAnswer": "20 liters",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "20",
+            "question": "The speed of a boat in still water is 12 km/hr, and the speed of the stream is 3 km/hr. What is the time taken to go 30 km upstream?",
+            "options": ["3 hours", "4 hours", "5 hours", "6 hours"],
+            "correctAnswer": "5 hours",
+            "category": "Mathematics",
+            "difficulty": "Tough"
+        },
+        {
+            "quesKey": "21",
+            "question": "If 5x - 3 = 4x + 7, find x.",
+            "options": ["10", "9", "7", "8"],
+            "correctAnswer": "10",
+            "category": "Mathematics",
+            "difficulty": "Easy"
+        },
+        {
+            "quesKey": "22",
+            "question": "The length of the diagonal of a square is 10√2 cm. Find its area.",
+            "options": ["200 cm²", "100 cm²", "150 cm²", "250 cm²"],
+            "correctAnswer": "100 cm²",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "23",
+            "question": "If a = 3 and b = 4, find the value of (a² + b²).",
+            "options": ["16", "9", "25", "30"],
+            "correctAnswer": "25",
+            "category": "Mathematics",
+            "difficulty": "Easy"
+        },
+        {
+            "quesKey": "24",
+            "question": "A man sells an article at 5% loss. If he sells it for ₹40 more, he gains 5%. What is the cost price of the article?",
+            "options": ["₹400", "₹800", "₹600", "₹500"],
+            "correctAnswer": "₹400",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        },
+        {
+            "quesKey": "25",
+            "question": "The ratio of ages of A and B is 4:3. After 6 years, the ratio becomes 5:4. What is A's current age?",
+            "options": ["24 years", "18 years", "30 years", "20 years"],
+            "correctAnswer": "24 years",
+            "category": "Mathematics",
+            "difficulty": "Medium"
+        }
+    ]
+}
+
 ]

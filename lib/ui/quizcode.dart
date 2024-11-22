@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizsutra/livequizinterface/waitingroom.dart';
 import 'package:quizsutra/ui/practicequiz.dart';
 
 class Quizcode extends StatefulWidget {
@@ -87,6 +88,8 @@ class _QuizcodeState extends State<Quizcode> {
                   InkWell(
                     onTap: () {
                       // print("object");
+                      
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Waitingroom()));
                     },
                     child: Container(
                       width: 200,

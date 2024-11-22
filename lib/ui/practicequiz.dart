@@ -41,8 +41,9 @@ int currentPage =0;
       ),
       appBar: AppBar(
         title: 
-        Text("Khelega Quiz??",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.white),),
+        Text("Khelega Quiz??",style: TextStyle(fontSize: 34,fontWeight: FontWeight.bold,color: Colors.white),),
         backgroundColor: Colors.purple,
+        foregroundColor: Colors.white,
       ),
       drawer: Drawer(
         backgroundColor: Colors.purple,        

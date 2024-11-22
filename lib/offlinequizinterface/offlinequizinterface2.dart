@@ -56,8 +56,6 @@ class _Offlinequizinterface2State extends State<Offlinequizinterface2> {
                           Relatedto("Number Series"),                  
                           SizedBox(width: 5,),                  
                           Relatedto("Percentage"),
-                          
-                  
                         ],
                       )
                     ],
@@ -136,7 +134,7 @@ class _Offlinequizinterface2State extends State<Offlinequizinterface2> {
           ),
         ),
       ),
-    );;
+    );
   }
 }
 
