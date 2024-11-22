@@ -60,31 +60,38 @@ class _Quizscreen3State extends State<Quizscreen3> {
     });
   }
 
-  submitbtn() {
+   submitbtn() {
 
     setState(() {
     timer?.cancel();
     isSubmitted =true;
     score =0;
+    });
 
     quiz.then((data){
       var questions= data[2]["questions"];
+      List<Map<String, String>> resultData = [];
       
       for(int i= 0;i<questions.length; i++){
-        if(selectedAnswers[i]==questions[i]["correctAnswer"]){
-          score+=25;
-          print("true $score");
-        }
-      }
+        String userAnswer = selectedAnswers[i];
+        String correctAnswer = questions[i]["correctAnswer"];
 
-    });
-    
-    
-    print("Final Score: $score");
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score)));
+        if(userAnswer==correctAnswer){
+          score+=25;
+          // print("true $score");
+        }
+
+        resultData.add({
+          "question": questions[i]["question"],
+          "userAnswer" : userAnswer,
+          "correctAnswer": correctAnswer
+        });
+      }
+    // print("Final Score: $score");
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score, resultData: resultData)));
     });
   }
-
+  
     onOptionSelected(String answer) {
     if (!isSubmitted) {
       setState(() {
@@ -214,26 +221,19 @@ class _Quizscreen3State extends State<Quizscreen3> {
                                Text("Question ${currentQuestionindex + 1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
                                SizedBox(height: 10,),
                                         
-                                        SizedBox(
-                                          height: 120,
-                                          child: Column(
-                                            children: [
-                                              Container(
-                                                                                    width: double.infinity,
-                                                                                    decoration: BoxDecoration(
-                                                                                     border: Border.all(color: Colors.white),
-                                                                                     color: Colors.black26
-                                                                                     // borderRadius: BorderRadius.circular(8),
-                                                                                     // boxShadow: [BoxShadow(color: Colors.black26,)],
-                                                                                    ),
-                                                                                   child: Padding(
-                                                                                     padding: const EdgeInsets.all(8.0),
-                                                                                     child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
-                                                                                   ),
-                                                                                  ),
-                                            ],
-                                          ),
-                                        ),
+                                        Container(
+                                                                              width: double.infinity,
+                                                                              decoration: BoxDecoration(
+                                                                               border: Border.all(color: Colors.white),
+                                                                               color: Colors.black26
+                                                                               // borderRadius: BorderRadius.circular(8),
+                                                                               // boxShadow: [BoxShadow(color: Colors.black26,)],
+                                                                              ),
+                                                                             child: Padding(
+                                                                               padding: const EdgeInsets.all(8.0),
+                                                                               child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
+                                                                             ),
+                                                                            ),
                           
                                     SizedBox(height: 40,),
                                     
