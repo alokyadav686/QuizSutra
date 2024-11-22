@@ -210,19 +210,26 @@ class _QuizscreenState extends State<Quizscreen> {
                                Text("Question ${currentQuestionindex + 1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
                                SizedBox(height: 10,),
                                         
-                                        Container(
-                                      width: double.infinity,
-                                      decoration: BoxDecoration(
-                                       border: Border.all(color: Colors.white),
-                                       color: Colors.black26
-                                       // borderRadius: BorderRadius.circular(8),
-                                       // boxShadow: [BoxShadow(color: Colors.black26,)],
-                                      ),
-                                     child: Padding(
-                                       padding: const EdgeInsets.all(8.0),
-                                       child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
-                                     ),
-                                    ),
+                                        SizedBox(
+                                          height: 120,
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                                                    width: double.infinity,
+                                                                                    decoration: BoxDecoration(
+                                                                                     border: Border.all(color: Colors.white),
+                                                                                     color: Colors.black26
+                                                                                     // borderRadius: BorderRadius.circular(8),
+                                                                                     // boxShadow: [BoxShadow(color: Colors.black26,)],
+                                                                                    ),
+                                                                                   child: Padding(
+                                                                                     padding: const EdgeInsets.all(8.0),
+                                                                                     child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
+                                                                                   ),
+                                                                                  ),
+                                            ],
+                                          ),
+                                        ),
                           
                                     SizedBox(height: 40,),
                                     
