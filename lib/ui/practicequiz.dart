@@ -1,8 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:quizsutra/apiservices.dart';
 import 'package:quizsutra/offlinequizinterface/offlinequizinterface1.dart';
 import 'package:quizsutra/offlinequizinterface/offlinequizinterface2.dart';
 import 'package:quizsutra/offlinequizinterface/offlinequizinterface3.dart';
+import 'package:quizsutra/ui/aboutus.dart';
 import 'package:quizsutra/ui/quizcode.dart';
 
 
@@ -17,6 +19,8 @@ class Practicequiz extends StatefulWidget {
 class _PracticequizState extends State<Practicequiz> {
   
 int currentPage =0;
+// var quizData =await getQuiz();
+// var quizkey = quizData['quizKey'];
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +147,7 @@ int currentPage =0;
               padding: const EdgeInsets.only(left: 6.0),
               child: InkWell(
                 onTap: () {
-                  
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Aboutus()));
                 },
                 child: Container(
                   height: 30,
@@ -336,6 +340,8 @@ int currentPage =0;
                 SizedBox(
                   height: 20,
                 ),
+
+                
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),

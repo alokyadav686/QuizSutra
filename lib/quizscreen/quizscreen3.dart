@@ -69,7 +69,7 @@ class _Quizscreen3State extends State<Quizscreen3> {
     });
 
     quiz.then((data){
-      var questions= data[2]["questions"];
+      var questions= data["reasoning"]["questions"];
       List<Map<String, String>> resultData = [];
       
       for(int i= 0;i<questions.length; i++){
@@ -189,8 +189,9 @@ class _Quizscreen3State extends State<Quizscreen3> {
                         }
                         if( snapshot.hasData){
             
-                          var quizData = snapshot.data[2];
+                          var quizData = snapshot.data["reasoning"];
                           var questions = quizData["questions"];
+                          var queskey = questions[currentQuestionindex]["quesKey"];
 
                           if (selectedAnswers.length < questions.length) {
                             selectedAnswers = List.generate(
@@ -210,7 +211,7 @@ class _Quizscreen3State extends State<Quizscreen3> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                           
-                               Text("Question ${currentQuestionindex + 1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
+                               Text("Question ${queskey} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
                                SizedBox(height: 10,),
                                         
                                         Container(

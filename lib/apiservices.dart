@@ -6,10 +6,20 @@ import 'package:http/http.dart' as http;
 var link = "assets/sampleapi/quizData.json";
 
 Future getQuiz() async{
-  String res =await rootBundle.loadString("assets/sampleapi/quizData.json");
+  String codingquiz =await rootBundle.loadString("assets/sampleapi/codingquiz.json");
+  String aptitude =await rootBundle.loadString("assets/sampleapi/aptitude.json");
+  String reasoning =await rootBundle.loadString("assets/sampleapi/reasoning.json");
 
-  var data = jsonDecode(res);
-  print("Data fetched from assets");
-    return data;
+  var dataofcodingquiz = jsonDecode(codingquiz);
+    var dataofaptitudequiz = jsonDecode(aptitude);
+    var dataofreasoningquiz = jsonDecode(reasoning);
+  
+  
+  return {
+      'codingquiz': dataofcodingquiz,
+      'aptitude': dataofaptitudequiz,
+      'reasoning': dataofreasoningquiz,
+      
+    };
   
 }

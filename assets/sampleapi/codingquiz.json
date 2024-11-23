@@ -1,0 +1,98 @@
+{
+    "quizKey": "quiz_coding",
+    "adminID": "admin123",
+    "status": true,
+    "quizTitle": "Coding Quiz",
+    "questions": [
+      {
+        "quesKey": "1",
+        "question": "What is the output of System.out.println(10 / 3); in Java?",
+        "options": ["3.333", "3", "10", "None of the above"],
+        "correctAnswer": "3",
+        "category": "Coding",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "2",
+        "question": "Which of the following is not a primitive data type in Java?",
+        "options": ["int", "float", "boolean", "String"],
+        "correctAnswer": "String",
+        "category": "Coding",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "3",
+        "question": "What is the time complexity of binary search?",
+        "options": ["O(n)", "O(log n)", "O(n^2)", "O(n log n)"],
+        "correctAnswer": "O(log n)",
+        "category": "Coding",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "4",
+        "question": "What does CSS stand for?",
+        "options": [
+          "Cascading Style Sheets",
+          "Computer Style System",
+          "Colorful Style Sheet",
+          "Creative Style Syntax"
+        ],
+        "correctAnswer": "Cascading Style Sheets",
+        "category": "Coding",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "5",
+        "question": "Which method in Java is used to start a thread?",
+        "options": ["run()", "start()", "init()", "execute()"],
+        "correctAnswer": "start()",
+        "category": "Coding",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "6",
+        "question": "What is the default port for HTTP?",
+        "options": ["21", "25", "80", "443"],
+        "correctAnswer": "80",
+        "category": "Coding",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "7",
+        "question": "What does SQL stand for?",
+        "options": [
+          "Structured Query Language",
+          "Simple Query Language",
+          "Standard Query Logic",
+          "Sequential Query Library"
+        ],
+        "correctAnswer": "Structured Query Language",
+        "category": "Coding",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "8",
+        "question": "Which sorting algorithm has the worst-case time complexity of O(n^2)?",
+        "options": ["Merge Sort", "Quick Sort", "Bubble Sort", "Heap Sort"],
+        "correctAnswer": "Bubble Sort",
+        "category": "Coding",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "9",
+        "question": "In Python, which keyword is used to define a function?",
+        "options": ["function", "define", "func", "def"],
+        "correctAnswer": "def",
+        "category": "Coding",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "10",
+        "question": "Which JavaScript function is used to parse a JSON string?",
+        "options": ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "parse.JSON()"],
+        "correctAnswer": "JSON.parse()",
+        "category": "Coding",
+        "difficulty": "Medium"
+      }
+    ]
+  }

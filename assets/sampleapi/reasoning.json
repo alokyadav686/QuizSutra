@@ -1,0 +1,88 @@
+{
+    "quizKey": "quiz_reasoning",
+    "adminID": "admin123",
+    "status": true,
+    "quizTitle": "Reasoning Quiz",
+    "questions": [
+      {
+        "quesKey": "1",
+        "question": "Find the next number in the series: 5, 10, 20, 40, __.",
+        "options": ["60", "80", "100", "120"],
+        "correctAnswer": "80",
+        "category": "Reasoning",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "2",
+        "question": "If A = 1, B = 2, C = 3, what is the value of D + G?",
+        "options": ["11", "7", "12", "10"],
+        "correctAnswer": "11",
+        "category": "Reasoning",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "3",
+        "question": "Which word does not belong in the group: Dog, Cat, Elephant, Laptop?",
+        "options": ["Dog", "Cat", "Elephant", "Laptop"],
+        "correctAnswer": "Laptop",
+        "category": "Reasoning",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "4",
+        "question": "If John is twice as old as Jane, and Jane is 10 years old, how old is John?",
+        "options": ["20", "30", "15", "25"],
+        "correctAnswer": "20",
+        "category": "Reasoning",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "5",
+        "question": "In a code language, if APPLE is written as BQQMF, how is ORANGE written?",
+        "options": ["PSBOHF", "PQBOHF", "OSBNHF", "PSBPHF"],
+        "correctAnswer": "PSBOHF",
+        "category": "Reasoning",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "6",
+        "question": "What comes next in the sequence: Z, X, V, T, __?",
+        "options": ["S", "R", "Q", "P"],
+        "correctAnswer": "R",
+        "category": "Reasoning",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "7",
+        "question": "A clock shows 3:15. What is the angle between the hour and minute hands?",
+        "options": ["0°", "7.5°", "15°", "90°"],
+        "correctAnswer": "7.5°",
+        "category": "Reasoning",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "8",
+        "question": "Choose the odd one out: Square, Circle, Rectangle, Triangle.",
+        "options": ["Square", "Circle", "Rectangle", "Triangle"],
+        "correctAnswer": "Circle",
+        "category": "Reasoning",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "9",
+        "question": "In a group of 20 people, 5 like pizza, 10 like pasta, and 5 like both. How many like neither?",
+        "options": ["0", "5", "10", "15"],
+        "correctAnswer": "5",
+        "category": "Reasoning",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "10",
+        "question": "If ALL = 25 and BALL = 38, what is the value of CALL?",
+        "options": ["49", "48", "50", "47"],
+        "correctAnswer": "47",
+        "category": "Reasoning",
+        "difficulty": "Hard"
+      }
+    ]
+  }

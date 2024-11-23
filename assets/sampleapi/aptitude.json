@@ -1,0 +1,88 @@
+{
+    "quizKey": "quiz_aptitude",
+    "adminID": "admin123",
+    "status": true,
+    "quizTitle": "Aptitude Quiz",
+    "questions": [
+      {
+        "quesKey": "1",
+        "question": "What is 25% of 200?",
+        "options": ["50", "25", "75", "100"],
+        "correctAnswer": "50",
+        "category": "Aptitude",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "2",
+        "question": "If 12 workers can complete a task in 10 days, how many days will it take 6 workers?",
+        "options": ["10", "20", "15", "5"],
+        "correctAnswer": "20",
+        "category": "Aptitude",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "3",
+        "question": "A train travels at 60 km/h. How far does it travel in 45 minutes?",
+        "options": ["30 km", "45 km", "60 km", "40 km"],
+        "correctAnswer": "45 km",
+        "category": "Aptitude",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "4",
+        "question": "If the ratio of apples to oranges in a basket is 4:3 and there are 28 fruits, how many are oranges?",
+        "options": ["12", "16", "14", "18"],
+        "correctAnswer": "12",
+        "category": "Aptitude",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "5",
+        "question": "What is the simple interest on $5000 at 5% per annum for 2 years?",
+        "options": ["$250", "$500", "$750", "$1000"],
+        "correctAnswer": "$500",
+        "category": "Aptitude",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "6",
+        "question": "The ages of two people are in the ratio 5:7. If the sum of their ages is 48 years, what is the age of the younger person?",
+        "options": ["20", "25", "22", "24"],
+        "correctAnswer": "20",
+        "category": "Aptitude",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "7",
+        "question": "If a product is marked at $120 and sold at a 20% discount, what is the selling price?",
+        "options": ["$96", "$100", "$90", "$110"],
+        "correctAnswer": "$96",
+        "category": "Aptitude",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "8",
+        "question": "A car covers 150 km in 3 hours. What is its speed in km/h?",
+        "options": ["50 km/h", "60 km/h", "45 km/h", "55 km/h"],
+        "correctAnswer": "50 km/h",
+        "category": "Aptitude",
+        "difficulty": "Easy"
+      },
+      {
+        "quesKey": "9",
+        "question": "If the perimeter of a square is 40 cm, what is the area?",
+        "options": ["100 cm²", "150 cm²", "200 cm²", "400 cm²"],
+        "correctAnswer": "100 cm²",
+        "category": "Aptitude",
+        "difficulty": "Medium"
+      },
+      {
+        "quesKey": "10",
+        "question": "What is the HCF of 48 and 18?",
+        "options": ["6", "12", "9", "3"],
+        "correctAnswer": "6",
+        "category": "Aptitude",
+        "difficulty": "Medium"
+      }
+    ]
+  }

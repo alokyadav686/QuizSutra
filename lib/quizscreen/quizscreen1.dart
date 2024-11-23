@@ -35,7 +35,7 @@ class _QuizscreenState extends State<Quizscreen> {
   // var isloaded =false;
   // var optionsList =[];
   List<String> selectedAnswers = [];
-  // var totalquestions = snapshot.data[0]
+  // var totalquestions = snapshot.data
   bool isSubmitted = false;
   // bool optiontapped = false;
   int score =0;
@@ -61,37 +61,72 @@ class _QuizscreenState extends State<Quizscreen> {
     });
   }
 
-  submitbtn() {
+  // submitbtn() {
 
-    setState(() {
-    timer?.cancel();
-    isSubmitted =true;
-    score =0;
-    });
+  //   setState(() {
+  //   timer?.cancel();
+  //   isSubmitted =true;
+  //   score =0;
+  //   });
 
-    quiz.then((data){
-      var questions= data[0]["questions"];
-      List<Map<String, String>> resultData = [];
+  //   quiz.then((data){
+  //     var questions= data["questions"];
+  //     List<Map<String, String>> resultData = [];
       
-      for(int i= 0;i<questions.length; i++){
-        String userAnswer = selectedAnswers[i];
-        String correctAnswer = questions[i]["correctAnswer"];
+  //     for(int i= 0;i<questions.length; i++){
+  //       String userAnswer = selectedAnswers[i];
+  //       String correctAnswer = questions[i]["correctAnswer"];
 
-        if(userAnswer==correctAnswer){
-          score+=25;
-          // print("true $score");
-        }
+  //       if(userAnswer==correctAnswer){
+  //         score+=25;
+  //         // print("true $score");
+  //       }
 
-        resultData.add({
-          "question": questions[i]["question"],
-          "userAnswer" : userAnswer,
-          "correctAnswer": correctAnswer
-        });
+  //       resultData.add({
+  //         "question": questions[i]["question"],
+  //         "userAnswer" : userAnswer,
+  //         "correctAnswer": correctAnswer
+  //       });
+  //     }
+  //   // print("Final Score: $score");
+  //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score, resultData: resultData)));
+  //   });
+  // }
+
+  submitbtn() {
+    print("called");
+  setState(() {
+    timer?.cancel();
+    isSubmitted = true;
+    score = 0;
+  });
+
+  quiz.then((data) {
+    List questions = data["codingquiz"]["questions"];
+    List<Map<String, String>> resultData = [];
+
+    for (int i = 0; i < questions.length; i++) {
+      String userAnswer = selectedAnswers[i];
+      String correctAnswer = questions[i]["correctAnswer"];
+
+      if (userAnswer == correctAnswer) {
+        score += 25;
       }
+
+      resultData.add({
+        "question": questions[i]["question"],
+        "userAnswer": userAnswer,
+        "correctAnswer": correctAnswer
+      });
+    }
     // print("Final Score: $score");
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score, resultData: resultData)));
-    });
-  }
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => ResultScreen(score: score, resultData: resultData)));
+  });
+}
+
 
     onOptionSelected(String answer) {
     if (!isSubmitted) {
@@ -113,12 +148,9 @@ class _QuizscreenState extends State<Quizscreen> {
       ),
       drawer: Drawer(
         backgroundColor: Colors.purple,
-
         child: Column(
           children: [
-
             Spacer(),
-
              Padding(
               padding: const EdgeInsets.only(left: 6.0),
               child: InkWell(
@@ -212,7 +244,6 @@ class _QuizscreenState extends State<Quizscreen> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: FutureBuilder(
-                      
                       future: quiz, 
                       builder: (BuildContext context , AsyncSnapshot snapshot){
                         if (snapshot.connectionState == ConnectionState.waiting) {
@@ -222,8 +253,11 @@ class _QuizscreenState extends State<Quizscreen> {
                         }
                         if( snapshot.hasData){
             
-                          var quizData = snapshot.data[0];
+                          var quizData = snapshot.data["codingquiz"];
+                                  //  print(quizData);
+                          
                           var questions = quizData["questions"];
+                          var queskey = questions[currentQuestionindex]["quesKey"];
 
                           if (selectedAnswers.length < questions.length) {
                             selectedAnswers = List.generate(
@@ -243,7 +277,7 @@ class _QuizscreenState extends State<Quizscreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                           
-                               Text("Question ${currentQuestionindex + 1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
+                               Text("Question ${queskey} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
                                SizedBox(height: 10,),
                                         
                                         Container(
