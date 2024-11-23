@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:quizsutra/apiservices.dart';
+import 'package:quizsutra/leaderboard/resultscreenonline.dart';
 
 class Mainquiz extends StatefulWidget {
   const Mainquiz({super.key});
@@ -19,6 +20,8 @@ class _MainquizState extends State<Mainquiz> {
   List<String> selectedAnswers = [];
   bool isSubmitted = false;
   int score =0;
+  bool isSelected=false;
+   var isLoaded = false;
 
   @override
   void initState() {
@@ -43,22 +46,42 @@ class _MainquizState extends State<Mainquiz> {
         else{
           
           timer.cancel();
+          gotonextquestion();
         }
         
       });
     });
   }
 
+  gotonextquestion(){
+
+    if(currentQuestionindex<9){
+
+    setState(() {
+    //  var isLoaded = false;
+    currentQuestionindex++;
+      sec=10;
+      // isSubmitted=false;
+    });
+    startTimer();
+    }
+    else{
+      print('Quiz Completed');  
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Resultscreenonline(score: score,)));
+    }
+  }
+
  onOptionSelected(String answer) {
     if (!isSubmitted) {
       setState(() {
         selectedAnswers[currentQuestionindex] = answer;
-        print("selected option ${selectedAnswers[currentQuestionindex] = answer}");
-        print("selected option ${selectedAnswers}");
+        if (answer == selectedAnswers[currentQuestionindex]) {
+          score++;
+        }
+        // isSubmitted=true;
       });
     }
   }
-
 
   
   @override
@@ -103,7 +126,7 @@ class _MainquizState extends State<Mainquiz> {
               
                   Container(
                     width: double.infinity,
-                    // color: Colors.amber,
+                 
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: FutureBuilder(
@@ -122,7 +145,7 @@ class _MainquizState extends State<Mainquiz> {
                             
                             var questions = quizData["questions"];
                             var queskey = questions[currentQuestionindex]["quesKey"];
-            
+
                             if (selectedAnswers.length < questions.length) {
                               selectedAnswers = List.generate(
                                   questions.length, (index) => '');
@@ -136,18 +159,16 @@ class _MainquizState extends State<Mainquiz> {
                                  SizedBox(height: 10,),
                                           
                                           Container(
-                                                                                width: double.infinity,
-                                                                                decoration: BoxDecoration(
-                                                                                 border: Border.all(color: Colors.white),
-                                                                                 color: Colors.black26
-                                                                                 // borderRadius: BorderRadius.circular(8),
-                                                                                 // boxShadow: [BoxShadow(color: Colors.black26,)],
-                                                                                ),
-                                                                               child: Padding(
-                                                                                 padding: const EdgeInsets.all(8.0),
-                                                                                 child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
-                                                                               ),
-                                                                              ),
+                                             width: double.infinity,
+                                             decoration: BoxDecoration(
+                                             border: Border.all(color: Colors.white),
+                                             color: Colors.black26
+                                              ),
+                                             child: Padding(
+                                           padding: const EdgeInsets.all(8.0),
+                                             child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
+                                              ),
+                                 ),
                             
                                       SizedBox(height: 40,),
                                       
@@ -172,9 +193,6 @@ class _MainquizState extends State<Mainquiz> {
                                                      width: double.infinity,
                                                                               
                                                     decoration: BoxDecoration(
-                                                   
-                                                  // color:optiontapped?  Color.fromARGB(255, 114, 20, 131): Colors.purple[50],
-                                                  // color: const Color.fromARGB(255, 30, 29, 30),
                                                   color: isSelected ? Colors.black:Colors.black38,
                                                   borderRadius: BorderRadius.circular(18)
                                                    ),

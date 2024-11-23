@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:http/http.dart' as http;
 
-var link = "assets/sampleapi/quizData.json";
+  var link = "https://quizapp-r80t.onrender.com/quizzes/allQuestions";
 
 Future getQuiz() async{
   String codingquiz =await rootBundle.loadString("assets/sampleapi/codingquiz.json");
@@ -22,4 +22,17 @@ Future getQuiz() async{
       
     };
   
+}
+
+Future getallQuiz() async{
+
+
+  var allquiz = await http.get(Uri.parse(link));
+
+  if(allquiz.statusCode == 200){
+    var data = jsonDecode(allquiz.body.toString());
+    print("data is loaded for all quiz");
+    return data;
+  }
+
 }
