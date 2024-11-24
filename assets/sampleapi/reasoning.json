@@ -1,124 +1,254 @@
 [
   {
-    "quesKey": 21,
-    "questionText": "If all roses are flowers and some flowers are red, which of the following is true?",
+    "quesKey": 61,
+    "questionText": "Which of the following does not belong to the group? Apple, Banana, Carrot, Mango",
     "options": [
-      "Some roses are red",
-      "All roses are red",
-      "Some flowers are roses",
-      "None of the above"
+      "Apple",
+      "Banana",
+      "Carrot",
+      "Mango"
     ],
-    "correctAnswer": "Some roses are red",
+    "correctAnswer": "Carrot",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 62,
+    "questionText": "What comes next in the series? 2, 4, 6, 8, __",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "correctAnswer": "10",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 63,
+    "questionText": "Find the odd one out: 2, 4, 8, 12",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "12"
+    ],
+    "correctAnswer": "12",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 64,
+    "questionText": "A is the father of B, but B is not the son of A. Who is B?",
+    "options": [
+      "Daughter",
+      "Cousin",
+      "Nephew",
+      "Sister"
+    ],
+    "correctAnswer": "Daughter",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 65,
+    "questionText": "If CAT is coded as 3120, how is DOG coded?",
+    "options": [
+      "4157",
+      "4120",
+      "7150",
+      "7157"
+    ],
+    "correctAnswer": "4157",
     "category": "Reasoning",
     "difficulty": "Medium"
   },
   {
-    "quesKey": 22,
-    "questionText": "In a certain code, 'EXAMPLE' is written as 'FYNQMF'. How is 'REASON' written in that code?",
+    "quesKey": 66,
+    "questionText": "Complete the analogy: Doctor is to Patient as Teacher is to __.",
     "options": [
-      "SFBTPM",
-      "SFAPNO",
-      "SGPTOO",
-      "SFZPLO"
+      "School",
+      "Student",
+      "Classroom",
+      "Principal"
     ],
-    "correctAnswer": "SFBTPM",
+    "correctAnswer": "Student",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 67,
+    "questionText": "Pointing to a photo, A says, 'He is the son of my father’s only daughter.' Who is the person?",
+    "options": [
+      "Brother",
+      "Son",
+      "Nephew",
+      "Cousin"
+    ],
+    "correctAnswer": "Brother",
     "category": "Reasoning",
     "difficulty": "Medium"
   },
   {
-    "quesKey": 23,
-    "questionText": "If 'A' is the father of 'B', and 'B' is the brother of 'C', then how is 'A' related to 'C'?",
+    "quesKey": 68,
+    "questionText": "What comes next in the sequence? A, C, E, G, __",
+    "options": [
+      "H",
+      "I",
+      "J",
+      "K"
+    ],
+    "correctAnswer": "I",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 69,
+    "questionText": "If 2 = 5, 3 = 10, 4 = 17, then 5 = ?",
+    "options": [
+      "20",
+      "23",
+      "26",
+      "29"
+    ],
+    "correctAnswer": "26",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 70,
+    "questionText": "How many meaningful words can be formed using the letters in 'STOP'?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctAnswer": "4",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 71,
+    "questionText": "Which number is missing? 3, 6, 11, 18, __",
+    "options": [
+      "25",
+      "26",
+      "27",
+      "28"
+    ],
+    "correctAnswer": "27",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 72,
+    "questionText": "If PINK is coded as 3519, how is BLUE coded?",
+    "options": [
+      "2712",
+      "2612",
+      "3518",
+      "3619"
+    ],
+    "correctAnswer": "2612",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 73,
+    "questionText": "What is the missing term? 2, 4, 8, 16, __",
+    "options": [
+      "24",
+      "28",
+      "32",
+      "36"
+    ],
+    "correctAnswer": "32",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 74,
+    "questionText": "What is the opposite of North-West?",
+    "options": [
+      "South-East",
+      "North-East",
+      "South-West",
+      "East"
+    ],
+    "correctAnswer": "South-East",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 75,
+    "questionText": "A clock shows 3:15. What is the angle between the hour and minute hand?",
+    "options": [
+      "0°",
+      "37.5°",
+      "45°",
+      "90°"
+    ],
+    "correctAnswer": "37.5°",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 76,
+    "questionText": "What comes next in the sequence? Z, X, V, T, __",
+    "options": [
+      "S",
+      "R",
+      "Q",
+      "P"
+    ],
+    "correctAnswer": "R",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 77,
+    "questionText": "In a family, A is the mother of B and C. If D is the husband of A, how is D related to B?",
     "options": [
       "Father",
       "Uncle",
-      "Brother",
-      "Grandfather"
+      "Grandfather",
+      "Cousin"
     ],
     "correctAnswer": "Father",
     "category": "Reasoning",
     "difficulty": "Easy"
   },
   {
-    "quesKey": 24,
-    "questionText": "In a class of 60 students, 24 like tea, 34 like coffee, and 12 like both tea and coffee. How many students like only tea?",
-    "options": [
-      "12",
-      "14",
-      "24",
-      "48"
-    ],
-    "correctAnswer": "12",
-    "category": "Reasoning",
-    "difficulty": "Medium"
-  },
-  {
-    "quesKey": 25,
-    "questionText": "Find the next number in the series: 2, 6, 12, 20, ?",
-    "options": [
-      "30",
-      "36",
-      "40",
-      "42"
-    ],
-    "correctAnswer": "30",
-    "category": "Reasoning",
-    "difficulty": "Medium"
-  },
-  {
-    "quesKey": 26,
-    "questionText": "Which of the following figure is the odd one out?",
+    "quesKey": 78,
+    "questionText": "Choose the odd one: Circle, Triangle, Rectangle, Sphere",
     "options": [
       "Circle",
       "Triangle",
       "Rectangle",
-      "Square"
+      "Sphere"
     ],
-    "correctAnswer": "Triangle",
+    "correctAnswer": "Sphere",
     "category": "Reasoning",
-    "difficulty": "Medium"
+    "difficulty": "Easy"
   },
   {
-    "quesKey": 27,
-    "questionText": "If 'A' stands for addition, 'B' stands for subtraction, and 'C' stands for multiplication, what is the result of 5 A 3 B 2 C 4?",
+    "quesKey": 79,
+    "questionText": "Which word cannot be formed using the letters in 'FRIENDLY'?",
     "options": [
-      "23",
-      "27",
-      "24",
-      "22"
+      "FRY",
+      "RIND",
+      "LYE",
+      "FLYER"
     ],
-    "correctAnswer": "23",
+    "correctAnswer": "FLYER",
     "category": "Reasoning",
     "difficulty": "Medium"
   },
   {
-    "quesKey": 28,
-    "questionText": "In a group of 8 people, if everyone shakes hands with every other person, how many handshakes will there be?",
-    "options": [
-      "28",
-      "36",
-      "56",
-      "48"
-    ],
-    "correctAnswer": "28",
-    "category": "Reasoning",
-    "difficulty": "Medium"
-  },
-  {
-    "quesKey": 29,
-    "questionText": "In a certain code language, 'GOLD' is written as 'HNME'. How is 'SILVER' written in that code?",
-    "options": [
-      "TJKWSQ",
-      "TJKWUQ",
-      "TJKWTQ",
-      "TJKWSR"
-    ],
-    "correctAnswer": "TJKWSQ",
-    "category": "Reasoning",
-    "difficulty": "Medium"
-  },
-  {
-    "quesKey": 30,
-    "questionText": "What is the missing number in the sequence: 1, 4, 9, 16, ?, 36",
+    "quesKey": 80,
+    "questionText": "What comes next in the sequence? 1, 4, 9, 16, __",
     "options": [
       "20",
       "24",
@@ -128,5 +258,135 @@
     "correctAnswer": "25",
     "category": "Reasoning",
     "difficulty": "Easy"
+  },
+  {
+    "quesKey": 81,
+    "questionText": "Pointing to a man, A says, 'He is the son of my mother’s brother.' How is the man related to A?",
+    "options": [
+      "Brother",
+      "Uncle",
+      "Cousin",
+      "Nephew"
+    ],
+    "correctAnswer": "Cousin",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 82,
+    "questionText": "What is the missing number? 2, 3, 5, 7, 11, __",
+    "options": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "correctAnswer": "13",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 83,
+    "questionText": "If BOOK is coded as COOL, how is PAGE coded?",
+    "options": [
+      "QAGE",
+      "RAHE",
+      "QAGE",
+      "QAHF"
+    ],
+    "correctAnswer": "QAGE",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 84,
+    "questionText": "Complete the analogy: Pen is to Write as Knife is to __.",
+    "options": [
+      "Cut",
+      "Stab",
+      "Draw",
+      "Carve"
+    ],
+    "correctAnswer": "Cut",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 85,
+    "questionText": "What comes next in the sequence? 1, 1, 2, 3, 5, __",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correctAnswer": "8",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 86,
+    "questionText": "Find the odd one out: Dog, Cat, Rabbit, Eagle",
+    "options": [
+      "Dog",
+      "Cat",
+      "Rabbit",
+      "Eagle"
+    ],
+    "correctAnswer": "Eagle",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 87,
+    "questionText": "Which letter is in the middle of 'ALGORITHM'?",
+    "options": [
+      "O",
+      "R",
+      "I",
+      "G"
+    ],
+    "correctAnswer": "R",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 88,
+    "questionText": "A is taller than B but shorter than C. Who is the tallest?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "Cannot Determine"
+    ],
+    "correctAnswer": "C",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 89,
+    "questionText": "Which direction is opposite to East?",
+    "options": [
+      "North",
+      "South",
+      "West",
+      "South-East"
+    ],
+    "correctAnswer": "West",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 90,
+    "questionText": "Find the odd one out: 25, 49, 64, 81",
+    "options": [
+      "25",
+      "49",
+      "64",
+      "81"
+    ],
+    "correctAnswer": "25",
+    "category": "Reasoning",
+    "difficulty": "Medium"
   }
 ]

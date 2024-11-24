@@ -14,6 +14,12 @@ class _QuizcodeState extends State<Quizcode> {
   final usernamecontroller =TextEditingController();
   final codeinputcontroller =TextEditingController();
 
+  @override
+  void initState() {
+    
+    super.initState();
+  }
+
   jointap()async{
 
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz()));

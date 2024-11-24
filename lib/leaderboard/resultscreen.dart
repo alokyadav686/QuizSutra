@@ -23,7 +23,7 @@ class _ResultScreenState extends State<ResultScreen> {
               Text("Your Score",style: TextStyle(fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),),
 
               SizedBox(height: 20),
-              Text("${widget.score} / 250",style: TextStyle(fontSize: 50, color: Colors.white, fontWeight: FontWeight.bold),),
+              Text("${widget.score} / 300",style: TextStyle(fontSize: 50, color: Colors.white, fontWeight: FontWeight.bold),),
               
               SizedBox(height: 40),
 

@@ -1,93 +1,394 @@
 [
   {
-    "quesKey": null,
-    "questionText": "Find the next number in the series: 2, 4, 8, 16, __.",
+    "quesKey": 1,
+    "questionText": "What is the output of `print(10 // 3)` in Python?",
     "options": [
-      "20",
-      "32",
-      "64",
-      "128"
+      "3",
+      "3.33",
+      "4",
+      "Error"
     ],
-    "correctAnswer": "32",
-    "category": "Reasoning",
-    "difficulty": "Medium"
-  },
-  {
-    "quesKey": null,
-    "questionText": "If a train travels 60 miles in 1 hour, how long will it take to travel 180 miles?",
-    "options": [
-      "1 hour",
-      "2 hours",
-      "3 hours",
-      "4 hours"
-    ],
-    "correctAnswer": "3 hours",
-    "category": "Reasoning",
+    "correctAnswer": "3",
+    "category": "Coding",
     "difficulty": "Easy"
   },
   {
-    "quesKey": null,
-    "questionText": "In a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides. This is known as?",
+    "quesKey": 2,
+    "questionText": "Which keyword is used to create an interface in Java?",
     "options": [
-      "Pythagoras Theorem",
-      "Binomial Theorem",
-      "Law of Sines",
-      "Law of Cosines"
+      "interface",
+      "class",
+      "implements",
+      "abstract"
     ],
-    "correctAnswer": "Pythagoras Theorem",
-    "category": "Reasoning",
+    "correctAnswer": "interface",
+    "category": "Coding",
     "difficulty": "Medium"
   },
   {
-    "quesKey": null,
-    "questionText": "What is the missing number in the sequence: 3, 9, 27, __, 243?",
+    "quesKey": 3,
+    "questionText": "What does `len()` do in Python?",
     "options": [
-      "36",
-      "81",
-      "108",
-      "54"
+      "Calculates the length of a string, list, or tuple",
+      "Checks if an element exists in a sequence",
+      "Sorts the given list",
+      "Finds the maximum element"
     ],
-    "correctAnswer": "81",
-    "category": "Reasoning",
-    "difficulty": "Medium"
+    "correctAnswer": "Calculates the length of a string, list, or tuple",
+    "category": "Coding",
+    "difficulty": "Easy"
   },
   {
-    "quesKey": null,
-    "questionText": "What is the smallest prime number?",
+    "quesKey": 4,
+    "questionText": "Which loop is guaranteed to execute at least once?",
+    "options": [
+      "for loop",
+      "while loop",
+      "do-while loop",
+      "foreach loop"
+    ],
+    "correctAnswer": "do-while loop",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 5,
+    "questionText": "What is the default value of an `int` in Java?",
     "options": [
       "0",
-      "1",
-      "2",
-      "3"
+      "-1",
+      "null",
+      "undefined"
     ],
-    "correctAnswer": "2",
-    "category": "Reasoning",
+    "correctAnswer": "0",
+    "category": "Coding",
     "difficulty": "Easy"
   },
   {
-    "quesKey": null,
-    "questionText": "Solve: 15 * 3 + 4 / 2 - 1.",
+    "quesKey": 6,
+    "questionText": "Which algorithm uses a divide-and-conquer strategy?",
     "options": [
-      "47",
-      "49",
-      "46",
-      "50"
+      "Merge Sort",
+      "Bubble Sort",
+      "Linear Search",
+      "Insertion Sort"
     ],
-    "correctAnswer": "47",
-    "category": "Reasoning",
+    "correctAnswer": "Merge Sort",
+    "category": "Coding",
     "difficulty": "Medium"
   },
   {
-    "quesKey": null,
-    "questionText": "What is the sum of the first 5 odd numbers?",
+    "quesKey": 7,
+    "questionText": "What is the purpose of the `finally` block in Python?",
     "options": [
-      "9",
-      "15",
-      "25",
-      "45"
+      "Executes only if an exception occurs",
+      "Executes code that must run after try-except",
+      "Executes if no exception occurs",
+      "Used to raise an exception"
     ],
-    "correctAnswer": "25",
-    "category": "Reasoning",
+    "correctAnswer": "Executes code that must run after try-except",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 8,
+    "questionText": "Which data type is immutable in Python?",
+    "options": [
+      "List",
+      "Set",
+      "Dictionary",
+      "Tuple"
+    ],
+    "correctAnswer": "Tuple",
+    "category": "Coding",
     "difficulty": "Easy"
+  },
+  {
+    "quesKey": 9,
+    "questionText": "Which of the following is not a primitive data type in Java?",
+    "options": [
+      "boolean",
+      "int",
+      "String",
+      "float"
+    ],
+    "correctAnswer": "String",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 10,
+    "questionText": "What is the purpose of the `break` statement in a loop?",
+    "options": [
+      "Skips the rest of the loop and continues the next iteration",
+      "Terminates the loop",
+      "Jumps to the start of the loop",
+      "Restarts the loop"
+    ],
+    "correctAnswer": "Terminates the loop",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 11,
+    "questionText": "What does `id()` return in Python?",
+    "options": [
+      "The size of the object",
+      "The memory address of the object",
+      "The data type of the object",
+      "The value of the object"
+    ],
+    "correctAnswer": "The memory address of the object",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 12,
+    "questionText": "Which sorting algorithm has the worst-case time complexity of O(n^2)?",
+    "options": [
+      "Merge Sort",
+      "Bubble Sort",
+      "Quick Sort",
+      "Heap Sort"
+    ],
+    "correctAnswer": "Bubble Sort",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 13,
+    "questionText": "In Java, what is the size of a `long` data type?",
+    "options": [
+      "8 bits",
+      "16 bits",
+      "32 bits",
+      "64 bits"
+    ],
+    "correctAnswer": "64 bits",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 14,
+    "questionText": "Which keyword is used to handle exceptions in Java?",
+    "options": [
+      "try",
+      "catch",
+      "throw",
+      "finally"
+    ],
+    "correctAnswer": "catch",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 15,
+    "questionText": "What is the output of `System.out.println(4 + 3 * 2);` in Java?",
+    "options": [
+      "14",
+      "10",
+      "13",
+      "9"
+    ],
+    "correctAnswer": "10",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 16,
+    "questionText": "What is the purpose of the `continue` statement in a loop?",
+    "options": [
+      "Terminates the loop",
+      "Skips the rest of the loop and starts the next iteration",
+      "Jumps to a labeled loop",
+      "Restarts the loop from the beginning"
+    ],
+    "correctAnswer": "Skips the rest of the loop and starts the next iteration",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 17,
+    "questionText": "Which of the following is a valid Python decorator?",
+    "options": [
+      "@staticmethod",
+      "@classmethod",
+      "@property",
+      "All of the above"
+    ],
+    "correctAnswer": "All of the above",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 18,
+    "questionText": "Which method is used to insert an element at a specific position in a Python list?",
+    "options": [
+      "append()",
+      "insert()",
+      "extend()",
+      "add()"
+    ],
+    "correctAnswer": "insert()",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 19,
+    "questionText": "What is the difference between `is` and `==` in Python?",
+    "options": [
+      "`is` checks equality; `==` checks identity",
+      "`is` checks identity; `==` checks equality",
+      "Both are identical",
+      "Both are used for comparison in lists only"
+    ],
+    "correctAnswer": "`is` checks identity; `==` checks equality",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 20,
+    "questionText": "Which of the following is not a valid keyword in Python?",
+    "options": [
+      "with",
+      "yield",
+      "pass",
+      "include"
+    ],
+    "correctAnswer": "include",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 21,
+    "questionText": "Which operator in Python is used for matrix multiplication?",
+    "options": [
+      "*",
+      "**",
+      "@",
+      "//"
+    ],
+    "correctAnswer": "@",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 22,
+    "questionText": "What is the time complexity of accessing an element in a Python dictionary?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n^2)"
+    ],
+    "correctAnswer": "O(1)",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 23,
+    "questionText": "Which keyword is used to define a constant in Java?",
+    "options": [
+      "const",
+      "final",
+      "static",
+      "constant"
+    ],
+    "correctAnswer": "final",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 24,
+    "questionText": "What is a thread-safe collection in Java?",
+    "options": [
+      "HashMap",
+      "ArrayList",
+      "Vector",
+      "LinkedList"
+    ],
+    "correctAnswer": "Vector",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 25,
+    "questionText": "Which function converts a string into an integer in Python?",
+    "options": [
+      "int()",
+      "str()",
+      "float()",
+      "eval()"
+    ],
+    "correctAnswer": "int()",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 26,
+    "questionText": "What is the purpose of the `super` keyword in Java?",
+    "options": [
+      "Access parent class methods",
+      "Create an instance of the current class",
+      "Override child class methods",
+      "Invoke the current class constructor"
+    ],
+    "correctAnswer": "Access parent class methods",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 27,
+    "questionText": "Which of these is used to iterate over an iterable in Python?",
+    "options": [
+      "for",
+      "while",
+      "do-while",
+      "foreach"
+    ],
+    "correctAnswer": "for",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 28,
+    "questionText": "What is the output of `4 << 2` in Python?",
+    "options": [
+      "8",
+      "16",
+      "64",
+      "2"
+    ],
+    "correctAnswer": "16",
+    "category": "Coding",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 29,
+    "questionText": "What is the main purpose of a constructor in Java?",
+    "options": [
+      "To initialize an object",
+      "To declare variables",
+      "To perform cleanup operations",
+      "To call methods"
+    ],
+    "correctAnswer": "To initialize an object",
+    "category": "Coding",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 30,
+    "questionText": "You are given an array of integers. Write a function that finds the maximum product of two distinct elements in the array. For example, if the array is `[3, 5, -2, 8, 10]`, the maximum product would be `80` (from `8 * 10`). Which of the following Python functions implements this correctly?",
+    "options": [
+      "```python\ndef maxProduct(arr):\n    arr.sort()\n    return arr[-1] * arr[-2]\n```",
+      "```python\ndef maxProduct(arr):\n    return max(arr) * max(arr[1:])\n```",
+      "```python\ndef maxProduct(arr):\n    largest = max(arr)\n    arr.remove(largest)\n    second_largest = max(arr)\n    return largest * second_largest\n```",
+      "None of the above"
+    ],
+    "correctAnswer": "```python\ndef maxProduct(arr):\n    arr.sort()\n    return arr[-1] * arr[-2]\n```",
+    "category": "Coding",
+    "difficulty": "Medium"
   }
+  
+  
 ]

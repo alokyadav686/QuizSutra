@@ -1,132 +1,392 @@
 [
   {
-    "quesKey": 11,
-    "questionText": "If the sum of two numbers is 20 and their difference is 4, what are the numbers?",
+    "quesKey": 31,
+    "questionText": "A shopkeeper buys 50 pens for ₹500 and sells them for ₹12 each. What is his total profit?",
     "options": [
-      "12 and 8",
-      "10 and 10",
-      "14 and 6",
-      "16 and 4"
+      "₹50",
+      "₹100",
+      "₹150",
+      "₹200"
     ],
-    "correctAnswer": "12 and 8",
-    "category": "Aptitude",
-    "difficulty": "Medium"
-  },
-  {
-    "quesKey": 12,
-    "questionText": "A train travels 60 miles in 1 hour 30 minutes. What is its average speed?",
-    "options": [
-      "40 mph",
-      "50 mph",
-      "60 mph",
-      "45 mph"
-    ],
-    "correctAnswer": "40 mph",
-    "category": "Aptitude",
-    "difficulty": "Medium"
-  },
-  {
-    "quesKey": 13,
-    "questionText": "A person spends 1/4 of his salary on rent, 1/3 on groceries, and the remaining 1200 on other expenses. What is his total salary?",
-    "options": [
-      "3600",
-      "4800",
-      "6000",
-      "7200"
-    ],
-    "correctAnswer": "4800",
-    "category": "Aptitude",
-    "difficulty": "Medium"
-  },
-  {
-    "quesKey": 14,
-    "questionText": "If the area of a square is 64 cm², what is the length of one of its sides?",
-    "options": [
-      "4 cm",
-      "6 cm",
-      "8 cm",
-      "16 cm"
-    ],
-    "correctAnswer": "8 cm",
+    "correctAnswer": "₹100",
     "category": "Aptitude",
     "difficulty": "Easy"
   },
   {
-    "quesKey": 15,
-    "questionText": "A car travels 300 km in 5 hours. What is its average speed?",
+    "quesKey": 32,
+    "questionText": "What is the HCF of 24 and 36?",
     "options": [
-      "50 km/h",
-      "60 km/h",
-      "70 km/h",
-      "80 km/h"
+      "6",
+      "8",
+      "12",
+      "18"
     ],
-    "correctAnswer": "60 km/h",
+    "correctAnswer": "12",
     "category": "Aptitude",
-    "difficulty": "Medium"
+    "difficulty": "Easy"
   },
   {
-    "quesKey": 16,
-    "questionText": "If a person can complete a task in 12 days, how long will it take for 3 people to complete the same task working together?",
+    "quesKey": 33,
+    "questionText": "A car covers 120 km in 2 hours. What is its speed?",
     "options": [
-      "3 days",
-      "4 days",
-      "5 days",
-      "6 days"
+      "50 km/hr",
+      "60 km/hr",
+      "70 km/hr",
+      "80 km/hr"
     ],
-    "correctAnswer": "4 days",
+    "correctAnswer": "60 km/hr",
     "category": "Aptitude",
-    "difficulty": "Medium"
+    "difficulty": "Easy"
   },
   {
-    "quesKey": 17,
-    "questionText": "What is the next number in the sequence: 2, 6, 12, 20, ?",
+    "quesKey": 34,
+    "questionText": "What is the square root of 144?",
     "options": [
-      "28",
+      "10",
+      "11",
+      "12",
+      "14"
+    ],
+    "correctAnswer": "12",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 35,
+    "questionText": "A train runs at 80 km/hr for 3 hours. How far does it travel?",
+    "options": [
+      "180 km",
+      "200 km",
+      "240 km",
+      "300 km"
+    ],
+    "correctAnswer": "240 km",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 36,
+    "questionText": "What is 15% of 200?",
+    "options": [
+      "25",
       "30",
-      "32",
-      "36"
+      "35",
+      "40"
     ],
     "correctAnswer": "30",
     "category": "Aptitude",
     "difficulty": "Easy"
   },
   {
-    "quesKey": 18,
-    "questionText": "A sum of money amounts to 1600 in 2 years at simple interest. What will it amount to in 5 years?",
+    "quesKey": 37,
+    "questionText": "If the radius of a circle is 7 cm, what is its diameter?",
     "options": [
-      "2000",
-      "2200",
-      "2400",
-      "2600"
+      "10 cm",
+      "12 cm",
+      "14 cm",
+      "16 cm"
     ],
-    "correctAnswer": "2000",
+    "correctAnswer": "14 cm",
     "category": "Aptitude",
-    "difficulty": "Medium"
+    "difficulty": "Easy"
   },
   {
-    "quesKey": 19,
-    "questionText": "The ratio of the ages of A and B is 3:4. If the sum of their ages is 35, what is the age of A?",
+    "quesKey": 38,
+    "questionText": "What is the LCM of 15 and 20?",
     "options": [
-      "14",
+      "30",
+      "40",
+      "50",
+      "60"
+    ],
+    "correctAnswer": "60",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 39,
+    "questionText": "If 5x = 20, what is x?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correctAnswer": "4",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 40,
+    "questionText": "What is the sum of the angles in a triangle?",
+    "options": [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    "correctAnswer": "180°",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 41,
+    "questionText": "What is the cube of 3?",
+    "options": [
+      "9",
+      "27",
+      "81",
+      "243"
+    ],
+    "correctAnswer": "27",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 42,
+    "questionText": "What is the perimeter of a square with a side of 5 cm?",
+    "options": [
+      "10 cm",
+      "15 cm",
+      "20 cm",
+      "25 cm"
+    ],
+    "correctAnswer": "20 cm",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 43,
+    "questionText": "What is 20% of 250?",
+    "options": [
+      "40",
+      "45",
+      "50",
+      "55"
+    ],
+    "correctAnswer": "50",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 44,
+    "questionText": "What is the average of 10, 20, and 30?",
+    "options": [
       "15",
-      "16",
-      "17"
+      "20",
+      "25",
+      "30"
     ],
-    "correctAnswer": "15",
+    "correctAnswer": "20",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 45,
+    "questionText": "What is the product of 12 and 15?",
+    "options": [
+      "150",
+      "160",
+      "170",
+      "180"
+    ],
+    "correctAnswer": "180",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 46,
+    "questionText": "What is the area of a square with a side of 4 cm?",
+    "options": [
+      "8 cm²",
+      "12 cm²",
+      "16 cm²",
+      "20 cm²"
+    ],
+    "correctAnswer": "16 cm²",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 47,
+    "questionText": "What is the value of 2³?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "correctAnswer": "8",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 48,
+    "questionText": "What is 75% of 80?",
+    "options": [
+      "50",
+      "55",
+      "60",
+      "65"
+    ],
+    "correctAnswer": "60",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 49,
+    "questionText": "If 3x = 12, what is x?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctAnswer": "4",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 50,
+    "questionText": "What is the largest two-digit prime number?",
+    "options": [
+      "89",
+      "97",
+      "99",
+      "91"
+    ],
+    "correctAnswer": "97",
     "category": "Aptitude",
     "difficulty": "Medium"
   },
   {
-    "quesKey": 20,
-    "questionText": "The cost of 5 pens and 3 pencils is 50 rupees. If the cost of one pen is 10 rupees, what is the cost of one pencil?",
+    "quesKey": 51,
+    "questionText": "A person buys a pen for ₹60 and sells it for ₹75. What is the profit?",
     "options": [
-      "5 rupees",
-      "6 rupees",
-      "7 rupees",
-      "8 rupees"
+      "₹10",
+      "₹15",
+      "₹20",
+      "₹25"
     ],
-    "correctAnswer": "5 rupees",
+    "correctAnswer": "₹15",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 52,
+    "questionText": "What is the simple interest on ₹1,000 at 5% per annum for 3 years?",
+    "options": [
+      "₹100",
+      "₹150",
+      "₹200",
+      "₹250"
+    ],
+    "correctAnswer": "₹150",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 53,
+    "questionText": "If a bag contains 3 red and 2 blue balls, what is the probability of picking a red ball?",
+    "options": [
+      "1/5",
+      "2/5",
+      "3/5",
+      "4/5"
+    ],
+    "correctAnswer": "3/5",
     "category": "Aptitude",
     "difficulty": "Medium"
+  },
+  {
+    "quesKey": 54,
+    "questionText": "What is 8% of 1,000?",
+    "options": [
+      "60",
+      "70",
+      "80",
+      "90"
+    ],
+    "correctAnswer": "80",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 55,
+    "questionText": "If x² = 25, what is x?",
+    "options": [
+      "3",
+      "5",
+      "-5",
+      "Both 5 and -5"
+    ],
+    "correctAnswer": "Both 5 and -5",
+    "category": "Aptitude",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 56,
+    "questionText": "What is 0.1 × 0.1?",
+    "options": [
+      "0.1",
+      "0.01",
+      "0.001",
+      "0.0001"
+    ],
+    "correctAnswer": "0.01",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 57,
+    "questionText": "If a train runs at 90 km/hr, how far will it travel in 4 hours?",
+    "options": [
+      "300 km",
+      "360 km",
+      "400 km",
+      "450 km"
+    ],
+    "correctAnswer": "360 km",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 58,
+    "questionText": "A student scores 75 marks out of 100. What is the percentage?",
+    "options": [
+      "70%",
+      "75%",
+      "80%",
+      "85%"
+    ],
+    "correctAnswer": "75%",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 59,
+    "questionText": "If a = 2 and b = 3, what is a² + b²?",
+    "options": [
+      "10",
+      "13",
+      "15",
+      "20"
+    ],
+    "correctAnswer": "13",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 60,
+    "questionText": "What is the remainder when 10 is divided by 3?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctAnswer": "1",
+    "category": "Aptitude",
+    "difficulty": "Easy"
   }
 ]
