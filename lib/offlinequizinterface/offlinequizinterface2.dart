@@ -15,7 +15,8 @@ class _Offlinequizinterface2State extends State<Offlinequizinterface2> {
       appBar: AppBar(
         title: Text('Aptitude Quiz', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.purple,
-        elevation: 0,
+        foregroundColor: Colors.white,
+        
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),

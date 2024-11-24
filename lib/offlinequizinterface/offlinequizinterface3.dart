@@ -15,7 +15,7 @@ class _Offlinequizinterface3State extends State<Offlinequizinterface3> {
       appBar: AppBar(
         title: Text('Reasoning Quiz', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.purple,
-        elevation: 0,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),

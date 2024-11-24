@@ -12,10 +12,11 @@ class _Offlinequizinterface1State extends State<Offlinequizinterface1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.purple,
       appBar: AppBar(
         title: Text('Coding Quiz', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.purple,
-        elevation: 0,
+        foregroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
