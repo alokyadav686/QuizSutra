@@ -1,487 +1,93 @@
 [
   {
-    "quizKey": "quiz_coding",
-    "adminID": "admin123",
-    "status": true,
-    "quizTitle": "Coding Quiz",
-    "questions": [
-      {
-        "quesKey": "1",
-        "question": "What is the output of System.out.println(10 / 3); in Java?",
-        "options": ["3.333", "3", "10", "None of the above"],
-        "correctAnswer": "3",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "2",
-        "question": "Which of the following is not a primitive data type in Java?",
-        "options": ["int", "float", "boolean", "String"],
-        "correctAnswer": "String",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "3",
-        "question": "What is the time complexity of binary search?",
-        "options": ["O(n)", "O(log n)", "O(n^2)", "O(n log n)"],
-        "correctAnswer": "O(log n)",
-        "category": "Coding",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "4",
-        "question": "What does CSS stand for?",
-        "options": [
-          "Cascading Style Sheets",
-          "Computer Style System",
-          "Colorful Style Sheet",
-          "Creative Style Syntax"
-        ],
-        "correctAnswer": "Cascading Style Sheets",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "5",
-        "question": "Which method in Java is used to start a thread?",
-        "options": ["run()", "start()", "init()", "execute()"],
-        "correctAnswer": "start()",
-        "category": "Coding",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "6",
-        "question": "What is the default port for HTTP?",
-        "options": ["21", "25", "80", "443"],
-        "correctAnswer": "80",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "7",
-        "question": "What does SQL stand for?",
-        "options": [
-          "Structured Query Language",
-          "Simple Query Language",
-          "Standard Query Logic",
-          "Sequential Query Library"
-        ],
-        "correctAnswer": "Structured Query Language",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "8",
-        "question": "Which sorting algorithm has the worst-case time complexity of O(n^2)?",
-        "options": ["Merge Sort", "Quick Sort", "Bubble Sort", "Heap Sort"],
-        "correctAnswer": "Bubble Sort",
-        "category": "Coding",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "9",
-        "question": "In Python, which keyword is used to define a function?",
-        "options": ["function", "define", "func", "def"],
-        "correctAnswer": "def",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "10",
-        "question": "Which JavaScript function is used to parse a JSON string?",
-        "options": ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "parse.JSON()"],
-        "correctAnswer": "JSON.parse()",
-        "category": "Coding",
-        "difficulty": "Medium"
-      }
-    ]
+    "quesKey": null,
+    "questionText": "Find the next number in the series: 2, 4, 8, 16, __.",
+    "options": [
+      "20",
+      "32",
+      "64",
+      "128"
+    ],
+    "correctAnswer": "32",
+    "category": "Reasoning",
+    "difficulty": "Medium"
   },
   {
-    "quizKey": "quiz_aptitude",
-    "adminID": "admin123",
-    "status": true,
-    "quizTitle": "Aptitude Quiz",
-    "questions": [
-      {
-        "quesKey": "1",
-        "question": "What is 25% of 200?",
-        "options": ["50", "25", "75", "100"],
-        "correctAnswer": "50",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "2",
-        "question": "If 12 workers can complete a task in 10 days, how many days will it take 6 workers?",
-        "options": ["10", "20", "15", "5"],
-        "correctAnswer": "20",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "3",
-        "question": "A train travels at 60 km/h. How far does it travel in 45 minutes?",
-        "options": ["30 km", "45 km", "60 km", "40 km"],
-        "correctAnswer": "45 km",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "4",
-        "question": "If the ratio of apples to oranges in a basket is 4:3 and there are 28 fruits, how many are oranges?",
-        "options": ["12", "16", "14", "18"],
-        "correctAnswer": "12",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "5",
-        "question": "What is the simple interest on $5000 at 5% per annum for 2 years?",
-        "options": ["$250", "$500", "$750", "$1000"],
-        "correctAnswer": "$500",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "6",
-        "question": "The ages of two people are in the ratio 5:7. If the sum of their ages is 48 years, what is the age of the younger person?",
-        "options": ["20", "25", "22", "24"],
-        "correctAnswer": "20",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "7",
-        "question": "If a product is marked at $120 and sold at a 20% discount, what is the selling price?",
-        "options": ["$96", "$100", "$90", "$110"],
-        "correctAnswer": "$96",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "8",
-        "question": "A car covers 150 km in 3 hours. What is its speed in km/h?",
-        "options": ["50 km/h", "60 km/h", "45 km/h", "55 km/h"],
-        "correctAnswer": "50 km/h",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "9",
-        "question": "If the perimeter of a square is 40 cm, what is the area?",
-        "options": ["100 cm²", "150 cm²", "200 cm²", "400 cm²"],
-        "correctAnswer": "100 cm²",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "10",
-        "question": "What is the HCF of 48 and 18?",
-        "options": ["6", "12", "9", "3"],
-        "correctAnswer": "6",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      }
-    ]
-  },
-  
-  
-  {
-    "quizKey": "quiz_reasoning",
-    "adminID": "admin123",
-    "status": true,
-    "quizTitle": "Reasoning Quiz",
-    "questions": [
-      {
-        "quesKey": "1",
-        "question": "Find the next number in the series: 5, 10, 20, 40, __.",
-        "options": ["60", "80", "100", "120"],
-        "correctAnswer": "80",
-        "category": "Reasoning",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "2",
-        "question": "If A = 1, B = 2, C = 3, what is the value of D + G?",
-        "options": ["11", "7", "12", "10"],
-        "correctAnswer": "11",
-        "category": "Reasoning",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "3",
-        "question": "Which word does not belong in the group: Dog, Cat, Elephant, Laptop?",
-        "options": ["Dog", "Cat", "Elephant", "Laptop"],
-        "correctAnswer": "Laptop",
-        "category": "Reasoning",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "4",
-        "question": "If John is twice as old as Jane, and Jane is 10 years old, how old is John?",
-        "options": ["20", "30", "15", "25"],
-        "correctAnswer": "20",
-        "category": "Reasoning",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "5",
-        "question": "In a code language, if APPLE is written as BQQMF, how is ORANGE written?",
-        "options": ["PSBOHF", "PQBOHF", "OSBNHF", "PSBPHF"],
-        "correctAnswer": "PSBOHF",
-        "category": "Reasoning",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "6",
-        "question": "What comes next in the sequence: Z, X, V, T, __?",
-        "options": ["S", "R", "Q", "P"],
-        "correctAnswer": "R",
-        "category": "Reasoning",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "7",
-        "question": "A clock shows 3:15. What is the angle between the hour and minute hands?",
-        "options": ["0°", "7.5°", "15°", "90°"],
-        "correctAnswer": "7.5°",
-        "category": "Reasoning",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "8",
-        "question": "Choose the odd one out: Square, Circle, Rectangle, Triangle.",
-        "options": ["Square", "Circle", "Rectangle", "Triangle"],
-        "correctAnswer": "Circle",
-        "category": "Reasoning",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "9",
-        "question": "In a group of 20 people, 5 like pizza, 10 like pasta, and 5 like both. How many like neither?",
-        "options": ["0", "5", "10", "15"],
-        "correctAnswer": "5",
-        "category": "Reasoning",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "10",
-        "question": "If ALL = 25 and BALL = 38, what is the value of CALL?",
-        "options": ["49", "48", "50", "47"],
-        "correctAnswer": "47",
-        "category": "Reasoning",
-        "difficulty": "Hard"
-      }
-    ]
+    "quesKey": null,
+    "questionText": "If a train travels 60 miles in 1 hour, how long will it take to travel 180 miles?",
+    "options": [
+      "1 hour",
+      "2 hours",
+      "3 hours",
+      "4 hours"
+    ],
+    "correctAnswer": "3 hours",
+    "category": "Reasoning",
+    "difficulty": "Easy"
   },
   {
-    "quizKey": "quiz_ssc_cgl_math_pyqs",
-    "adminID": "admin123",
-    "status": true,
-    "quizTitle": "SSC CGL Mathematics PYQs",
-    "questions": [
-        {
-            "quesKey": "1",
-            "question": "If the cost price of 15 articles is equal to the selling price of 12 articles, what is the profit percentage?",
-            "options": ["20%", "25%", "30%", "33.33%"],
-            "correctAnswer": "25%",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "2",
-            "question": "A train running at 54 km/hr takes 20 seconds to cross a platform 150 meters long. What is the length of the train?",
-            "options": ["200 m", "250 m", "300 m", "350 m"],
-            "correctAnswer": "200 m",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "3",
-            "question": "The HCF of two numbers is 16, and their LCM is 240. If one of the numbers is 48, find the other number.",
-            "options": ["80", "120", "60", "100"],
-            "correctAnswer": "80",
-            "category": "Mathematics",
-            "difficulty": "Easy"
-        },
-        {
-            "quesKey": "4",
-            "question": "What is the unit digit of 7^95?",
-            "options": ["1", "3", "7", "9"],
-            "correctAnswer": "3",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "5",
-            "question": "If the radius of a cylinder is halved and its height is doubled, what will be the ratio of the new volume to the original volume?",
-            "options": ["1:2", "1:4", "2:1", "4:1"],
-            "correctAnswer": "1:2",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "6",
-            "question": "Find the area of a triangle with sides 13 cm, 14 cm, and 15 cm.",
-            "options": ["84 cm²", "91 cm²", "98 cm²", "100 cm²"],
-            "correctAnswer": "84 cm²",
-            "category": "Mathematics",
-            "difficulty": "Tough"
-        },
-        {
-            "quesKey": "7",
-            "question": "If sin A = 3/5, find cos A.",
-            "options": ["4/5", "3/4", "5/3", "5/4"],
-            "correctAnswer": "4/5",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "8",
-            "question": "A shopkeeper allows a discount of 20% on the marked price of an article and still makes a profit of 25%. What is the cost price of the article if the marked price is ₹500?",
-            "options": ["₹300", "₹320", "₹350", "₹400"],
-            "correctAnswer": "₹320",
-            "category": "Mathematics",
-            "difficulty": "Tough"
-        },
-        {
-            "quesKey": "9",
-            "question": "The average of 20 numbers is zero. Of these, at most, how many may be greater than zero?",
-            "options": ["20", "10", "19", "0"],
-            "correctAnswer": "19",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "10",
-            "question": "If the difference between simple interest and compound interest on a sum of ₹10,000 for 2 years at 5% per annum is:",
-            "options": ["₹25", "₹50", "₹75", "₹100"],
-            "correctAnswer": "₹25",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "11",
-            "question": "A man can row 30 km downstream in 2 hours and returns in 3 hours. What is the speed of the stream?",
-            "options": ["2 km/hr", "3 km/hr", "4 km/hr", "5 km/hr"],
-            "correctAnswer": "3 km/hr",
-            "category": "Mathematics",
-            "difficulty": "Tough"
-        },
-        {
-            "quesKey": "12",
-            "question": "The length of a rectangle is increased by 20% and the breadth is decreased by 10%. What is the percentage change in the area?",
-            "options": ["8% increase", "8% decrease", "10% increase", "10% decrease"],
-            "correctAnswer": "8% increase",
-            "category": "Mathematics",
-            "difficulty": "Tough"
-        },
-        {
-            "quesKey": "13",
-            "question": "A sum of ₹12,000 amounts to ₹13,200 in 2 years at simple interest. What is the rate of interest per annum?",
-            "options": ["5%", "8%", "10%", "12%"],
-            "correctAnswer": "5%",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "14",
-            "question": "If the area of a circle is 616 cm², find its circumference.",
-            "options": ["88 cm", "96 cm", "80 cm", "84 cm"],
-            "correctAnswer": "88 cm",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "15",
-            "question": "If the difference between a two-digit number and the number obtained by interchanging its digits is 36, what is the sum of the digits?",
-            "options": ["8", "9", "10", "12"],
-            "correctAnswer": "12",
-            "category": "Mathematics",
-            "difficulty": "Tough"
-        },
-        {
-            "quesKey": "16",
-            "question": "A pipe can fill a tank in 12 hours, while another pipe can empty it in 20 hours. If both are opened together, how long will it take to fill the tank?",
-            "options": ["30 hours", "40 hours", "24 hours", "20 hours"],
-            "correctAnswer": "30 hours",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "17",
-            "question": "If 4x² - 9 = 0, find the value of x.",
-            "options": ["3/2", "2/3", "4", "-3/2"],
-            "correctAnswer": "3/2",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "18",
-            "question": "The average of 6 consecutive even numbers is 25. Find the largest number.",
-            "options": ["30", "32", "28", "26"],
-            "correctAnswer": "30",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "19",
-            "question": "The ratio of milk to water in 60 liters of mixture is 2:1. How much water should be added to make the ratio 1:1?",
-            "options": ["10 liters", "20 liters", "15 liters", "25 liters"],
-            "correctAnswer": "20 liters",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "20",
-            "question": "The speed of a boat in still water is 12 km/hr, and the speed of the stream is 3 km/hr. What is the time taken to go 30 km upstream?",
-            "options": ["3 hours", "4 hours", "5 hours", "6 hours"],
-            "correctAnswer": "5 hours",
-            "category": "Mathematics",
-            "difficulty": "Tough"
-        },
-        {
-            "quesKey": "21",
-            "question": "If 5x - 3 = 4x + 7, find x.",
-            "options": ["10", "9", "7", "8"],
-            "correctAnswer": "10",
-            "category": "Mathematics",
-            "difficulty": "Easy"
-        },
-        {
-            "quesKey": "22",
-            "question": "The length of the diagonal of a square is 10√2 cm. Find its area.",
-            "options": ["200 cm²", "100 cm²", "150 cm²", "250 cm²"],
-            "correctAnswer": "100 cm²",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "23",
-            "question": "If a = 3 and b = 4, find the value of (a² + b²).",
-            "options": ["16", "9", "25", "30"],
-            "correctAnswer": "25",
-            "category": "Mathematics",
-            "difficulty": "Easy"
-        },
-        {
-            "quesKey": "24",
-            "question": "A man sells an article at 5% loss. If he sells it for ₹40 more, he gains 5%. What is the cost price of the article?",
-            "options": ["₹400", "₹800", "₹600", "₹500"],
-            "correctAnswer": "₹400",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        },
-        {
-            "quesKey": "25",
-            "question": "The ratio of ages of A and B is 4:3. After 6 years, the ratio becomes 5:4. What is A's current age?",
-            "options": ["24 years", "18 years", "30 years", "20 years"],
-            "correctAnswer": "24 years",
-            "category": "Mathematics",
-            "difficulty": "Medium"
-        }
-    ]
-}
-
+    "quesKey": null,
+    "questionText": "In a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides. This is known as?",
+    "options": [
+      "Pythagoras Theorem",
+      "Binomial Theorem",
+      "Law of Sines",
+      "Law of Cosines"
+    ],
+    "correctAnswer": "Pythagoras Theorem",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": null,
+    "questionText": "What is the missing number in the sequence: 3, 9, 27, __, 243?",
+    "options": [
+      "36",
+      "81",
+      "108",
+      "54"
+    ],
+    "correctAnswer": "81",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": null,
+    "questionText": "What is the smallest prime number?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "2",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": null,
+    "questionText": "Solve: 15 * 3 + 4 / 2 - 1.",
+    "options": [
+      "47",
+      "49",
+      "46",
+      "50"
+    ],
+    "correctAnswer": "47",
+    "category": "Reasoning",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": null,
+    "questionText": "What is the sum of the first 5 odd numbers?",
+    "options": [
+      "9",
+      "15",
+      "25",
+      "45"
+    ],
+    "correctAnswer": "25",
+    "category": "Reasoning",
+    "difficulty": "Easy"
+  }
 ]

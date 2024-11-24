@@ -16,7 +16,7 @@ class _Quizscreen2State extends State<Quizscreen2> {
   void initState() {
     
     super.initState();
-    quiz =getQuiz();
+    quiz =getallQuiz();
     startTimer();
   }
 
@@ -69,12 +69,12 @@ class _Quizscreen2State extends State<Quizscreen2> {
     });
 
     quiz.then((data){
-      var questions= data["aptitude"]["questions"];
+      var questionss= data["aptitude"];
       List<Map<String, String>> resultData = [];
       
-      for(int i= 0;i<questions.length; i++){
+      for(int i= 0;i<questionss.length; i++){
         String userAnswer = selectedAnswers[i];
-        String correctAnswer = questions[i]["correctAnswer"];
+        String correctAnswer = questionss[i]["correctAnswer"];
 
         if(userAnswer==correctAnswer){
           score+=25;
@@ -82,7 +82,7 @@ class _Quizscreen2State extends State<Quizscreen2> {
         }
 
         resultData.add({
-          "question": questions[i]["question"],
+          "question": questionss[i]["questionText"],
           "userAnswer" : userAnswer,
           "correctAnswer": correctAnswer
         });
@@ -190,8 +190,7 @@ class _Quizscreen2State extends State<Quizscreen2> {
                         if( snapshot.hasData){
             
                           var quizData = snapshot.data["aptitude"];
-                          var questions = quizData["questions"];
-                          var queskey = questions[currentQuestionindex]["quesKey"];
+                          var questions = quizData;
 
                           if (selectedAnswers.length < questions.length) {
                             selectedAnswers = List.generate(
@@ -211,7 +210,7 @@ class _Quizscreen2State extends State<Quizscreen2> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                           
-                               Text("Question ${queskey} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
+                               Text("Question ${currentQuestionindex+1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
                                SizedBox(height: 10,),
                                         
                                         Container(
@@ -224,7 +223,7 @@ class _Quizscreen2State extends State<Quizscreen2> {
                                                                               ),
                                                                              child: Padding(
                                                                                padding: const EdgeInsets.all(8.0),
-                                                                               child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
+                                                                               child: Text(questions[currentQuestionindex]["questionText"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
                                                                              ),
                                                                             ),
                           
@@ -258,7 +257,7 @@ class _Quizscreen2State extends State<Quizscreen2> {
                                                 borderRadius: BorderRadius.circular(18)
                                                  ),
                                                 child: Center(child: Padding(
-                                            padding: const EdgeInsets.symmetric(vertical: 15),
+                                            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                                             child: Text(option ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
                                               )),
                                              ),

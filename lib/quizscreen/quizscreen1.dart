@@ -17,7 +17,7 @@ class _QuizscreenState extends State<Quizscreen> {
   void initState() {
     
     super.initState();
-    quiz =getQuiz();
+    quiz =getallQuiz();
     startTimer();
   }
 
@@ -61,38 +61,6 @@ class _QuizscreenState extends State<Quizscreen> {
     });
   }
 
-  // submitbtn() {
-
-  //   setState(() {
-  //   timer?.cancel();
-  //   isSubmitted =true;
-  //   score =0;
-  //   });
-
-  //   quiz.then((data){
-  //     var questions= data["questions"];
-  //     List<Map<String, String>> resultData = [];
-      
-  //     for(int i= 0;i<questions.length; i++){
-  //       String userAnswer = selectedAnswers[i];
-  //       String correctAnswer = questions[i]["correctAnswer"];
-
-  //       if(userAnswer==correctAnswer){
-  //         score+=25;
-  //         // print("true $score");
-  //       }
-
-  //       resultData.add({
-  //         "question": questions[i]["question"],
-  //         "userAnswer" : userAnswer,
-  //         "correctAnswer": correctAnswer
-  //       });
-  //     }
-  //   // print("Final Score: $score");
-  //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ResultScreen(score:score, resultData: resultData)));
-  //   });
-  // }
-
   submitbtn() {
     print("called");
   setState(() {
@@ -102,19 +70,19 @@ class _QuizscreenState extends State<Quizscreen> {
   });
 
   quiz.then((data) {
-    List questions = data["codingquiz"]["questions"];
+    List questionss = data["codingquiz"];
     List<Map<String, String>> resultData = [];
 
-    for (int i = 0; i < questions.length; i++) {
+    for (int i = 0; i < questionss.length; i++) {
       String userAnswer = selectedAnswers[i];
-      String correctAnswer = questions[i]["correctAnswer"];
+      String correctAnswer = questionss[i]["correctAnswer"];
 
       if (userAnswer == correctAnswer) {
         score += 25;
       }
 
       resultData.add({
-        "question": questions[i]["question"],
+        "question": questionss[i]["questionText"],
         "userAnswer": userAnswer,
         "correctAnswer": correctAnswer
       });
@@ -126,6 +94,7 @@ class _QuizscreenState extends State<Quizscreen> {
             builder: (context) => ResultScreen(score: score, resultData: resultData)));
   });
 }
+
 
 
     onOptionSelected(String answer) {
@@ -256,9 +225,8 @@ class _QuizscreenState extends State<Quizscreen> {
                           var quizData = snapshot.data["codingquiz"];
                                   //  print(quizData);
                           
-                          var questions = quizData["questions"];
-                          var queskey = questions[currentQuestionindex]["quesKey"];
-
+                          var questions = quizData;
+                        
                           if (selectedAnswers.length < questions.length) {
                             selectedAnswers = List.generate(
                                 questions.length, (index) => '');
@@ -277,7 +245,7 @@ class _QuizscreenState extends State<Quizscreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                           
-                               Text("Question ${queskey} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
+                               Text("Question ${currentQuestionindex +1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
                                SizedBox(height: 10,),
                                         
                                         Container(
@@ -290,7 +258,7 @@ class _QuizscreenState extends State<Quizscreen> {
                                                                               ),
                                                                              child: Padding(
                                                                                padding: const EdgeInsets.all(8.0),
-                                                                               child: Text(questions[currentQuestionindex]["question"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
+                                                                               child: Text(questions[currentQuestionindex]["questionText"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
                                                                              ),
                                                                             ),
                           
@@ -324,7 +292,7 @@ class _QuizscreenState extends State<Quizscreen> {
                                                 borderRadius: BorderRadius.circular(18)
                                                  ),
                                                 child: Center(child: Padding(
-                                            padding: const EdgeInsets.symmetric(vertical: 15),
+                                            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                                             child: Text(option ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
                                               )),
                                              ),

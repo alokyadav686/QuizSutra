@@ -1,98 +1,132 @@
-{
-    "quizKey": "quiz_coding",
-    "adminID": "admin123",
-    "status": true,
-    "quizTitle": "Coding Quiz",
-    "questions": [
-      {
-        "quesKey": "1",
-        "question": "What is the output of System.out.println(10 / 3); in Java?",
-        "options": ["3.333", "3", "10", "None of the above"],
-        "correctAnswer": "3",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "2",
-        "question": "Which of the following is not a primitive data type in Java?",
-        "options": ["int", "float", "boolean", "String"],
-        "correctAnswer": "String",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "3",
-        "question": "What is the time complexity of binary search?",
-        "options": ["O(n)", "O(log n)", "O(n^2)", "O(n log n)"],
-        "correctAnswer": "O(log n)",
-        "category": "Coding",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "4",
-        "question": "What does CSS stand for?",
-        "options": [
-          "Cascading Style Sheets",
-          "Computer Style System",
-          "Colorful Style Sheet",
-          "Creative Style Syntax"
-        ],
-        "correctAnswer": "Cascading Style Sheets",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "5",
-        "question": "Which method in Java is used to start a thread?",
-        "options": ["run()", "start()", "init()", "execute()"],
-        "correctAnswer": "start()",
-        "category": "Coding",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "6",
-        "question": "What is the default port for HTTP?",
-        "options": ["21", "25", "80", "443"],
-        "correctAnswer": "80",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "7",
-        "question": "What does SQL stand for?",
-        "options": [
-          "Structured Query Language",
-          "Simple Query Language",
-          "Standard Query Logic",
-          "Sequential Query Library"
-        ],
-        "correctAnswer": "Structured Query Language",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "8",
-        "question": "Which sorting algorithm has the worst-case time complexity of O(n^2)?",
-        "options": ["Merge Sort", "Quick Sort", "Bubble Sort", "Heap Sort"],
-        "correctAnswer": "Bubble Sort",
-        "category": "Coding",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "9",
-        "question": "In Python, which keyword is used to define a function?",
-        "options": ["function", "define", "func", "def"],
-        "correctAnswer": "def",
-        "category": "Coding",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "10",
-        "question": "Which JavaScript function is used to parse a JSON string?",
-        "options": ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "parse.JSON()"],
-        "correctAnswer": "JSON.parse()",
-        "category": "Coding",
-        "difficulty": "Medium"
-      }
-    ]
+[
+  {
+    "quesKey": 1,
+    "questionText": "Which of the following is the time complexity of performing an insertion operation in a binary search tree (BST) in the worst case?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(1)"
+    ],
+    "correctAnswer": "O(n)",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 2,
+    "questionText": "Which of the following algorithms is used to solve the Knapsack problem?",
+    "options": [
+      "Dynamic Programming",
+      "Greedy Algorithm",
+      "Divide and Conquer",
+      "Brute Force"
+    ],
+    "correctAnswer": "Dynamic Programming",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 3,
+    "questionText": "Which of the following is the space complexity of the depth-first search (DFS) algorithm in the worst case?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n^2)",
+      "O(1)"
+    ],
+    "correctAnswer": "O(n)",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 4,
+    "questionText": "Which data structure does the A* algorithm use to find the shortest path?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Priority Queue",
+      "Heap"
+    ],
+    "correctAnswer": "Priority Queue",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 5,
+    "questionText": "Which of the following is an example of a greedy algorithm?",
+    "options": [
+      "Dijkstra's Algorithm",
+      "Prim's Algorithm",
+      "Merge Sort",
+      "Floyd-Warshall Algorithm"
+    ],
+    "correctAnswer": "Prim's Algorithm",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 6,
+    "questionText": "Which of the following is a characteristic of a Red-Black Tree?",
+    "options": [
+      "It is an unbalanced binary search tree",
+      "It ensures that no node has more than two children",
+      "It is a self-balancing binary search tree",
+      "It has a maximum height of O(log n)"
+    ],
+    "correctAnswer": "It is a self-balancing binary search tree",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 7,
+    "questionText": "Which of the following is NOT a feature of the merge sort algorithm?",
+    "options": [
+      "Divide and Conquer strategy",
+      "Stable sort",
+      "In-place sorting",
+      "Recursive approach"
+    ],
+    "correctAnswer": "In-place sorting",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 8,
+    "questionText": "What is the best time complexity of the QuickSort algorithm in average case?",
+    "options": [
+      "O(n^2)",
+      "O(n log n)",
+      "O(log n)",
+      "O(n)"
+    ],
+    "correctAnswer": "O(n log n)",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 9,
+    "questionText": "Which of the following is NOT true about a heap data structure?",
+    "options": [
+      "It can be used to implement a priority queue",
+      "It is always a complete binary tree",
+      "The elements are sorted in increasing order",
+      "It supports efficient insertion and deletion operations"
+    ],
+    "correctAnswer": "The elements are sorted in increasing order",
+    "category": "Coding",
+    "difficulty": "Hard"
+  },
+  {
+    "quesKey": 10,
+    "questionText": "Which of the following sorting algorithms is considered stable?",
+    "options": [
+      "Quick Sort",
+      "Merge Sort",
+      "Heap Sort",
+      "Selection Sort"
+    ],
+    "correctAnswer": "Merge Sort",
+    "category": "Coding",
+    "difficulty": "Hard"
   }
+]

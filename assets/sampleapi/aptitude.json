@@ -1,88 +1,132 @@
-{
-    "quizKey": "quiz_aptitude",
-    "adminID": "admin123",
-    "status": true,
-    "quizTitle": "Aptitude Quiz",
-    "questions": [
-      {
-        "quesKey": "1",
-        "question": "What is 25% of 200?",
-        "options": ["50", "25", "75", "100"],
-        "correctAnswer": "50",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "2",
-        "question": "If 12 workers can complete a task in 10 days, how many days will it take 6 workers?",
-        "options": ["10", "20", "15", "5"],
-        "correctAnswer": "20",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "3",
-        "question": "A train travels at 60 km/h. How far does it travel in 45 minutes?",
-        "options": ["30 km", "45 km", "60 km", "40 km"],
-        "correctAnswer": "45 km",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "4",
-        "question": "If the ratio of apples to oranges in a basket is 4:3 and there are 28 fruits, how many are oranges?",
-        "options": ["12", "16", "14", "18"],
-        "correctAnswer": "12",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "5",
-        "question": "What is the simple interest on $5000 at 5% per annum for 2 years?",
-        "options": ["$250", "$500", "$750", "$1000"],
-        "correctAnswer": "$500",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "6",
-        "question": "The ages of two people are in the ratio 5:7. If the sum of their ages is 48 years, what is the age of the younger person?",
-        "options": ["20", "25", "22", "24"],
-        "correctAnswer": "20",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "7",
-        "question": "If a product is marked at $120 and sold at a 20% discount, what is the selling price?",
-        "options": ["$96", "$100", "$90", "$110"],
-        "correctAnswer": "$96",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "8",
-        "question": "A car covers 150 km in 3 hours. What is its speed in km/h?",
-        "options": ["50 km/h", "60 km/h", "45 km/h", "55 km/h"],
-        "correctAnswer": "50 km/h",
-        "category": "Aptitude",
-        "difficulty": "Easy"
-      },
-      {
-        "quesKey": "9",
-        "question": "If the perimeter of a square is 40 cm, what is the area?",
-        "options": ["100 cm²", "150 cm²", "200 cm²", "400 cm²"],
-        "correctAnswer": "100 cm²",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      },
-      {
-        "quesKey": "10",
-        "question": "What is the HCF of 48 and 18?",
-        "options": ["6", "12", "9", "3"],
-        "correctAnswer": "6",
-        "category": "Aptitude",
-        "difficulty": "Medium"
-      }
-    ]
+[
+  {
+    "quesKey": 11,
+    "questionText": "If the sum of two numbers is 20 and their difference is 4, what are the numbers?",
+    "options": [
+      "12 and 8",
+      "10 and 10",
+      "14 and 6",
+      "16 and 4"
+    ],
+    "correctAnswer": "12 and 8",
+    "category": "Aptitude",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 12,
+    "questionText": "A train travels 60 miles in 1 hour 30 minutes. What is its average speed?",
+    "options": [
+      "40 mph",
+      "50 mph",
+      "60 mph",
+      "45 mph"
+    ],
+    "correctAnswer": "40 mph",
+    "category": "Aptitude",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 13,
+    "questionText": "A person spends 1/4 of his salary on rent, 1/3 on groceries, and the remaining 1200 on other expenses. What is his total salary?",
+    "options": [
+      "3600",
+      "4800",
+      "6000",
+      "7200"
+    ],
+    "correctAnswer": "4800",
+    "category": "Aptitude",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 14,
+    "questionText": "If the area of a square is 64 cm², what is the length of one of its sides?",
+    "options": [
+      "4 cm",
+      "6 cm",
+      "8 cm",
+      "16 cm"
+    ],
+    "correctAnswer": "8 cm",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 15,
+    "questionText": "A car travels 300 km in 5 hours. What is its average speed?",
+    "options": [
+      "50 km/h",
+      "60 km/h",
+      "70 km/h",
+      "80 km/h"
+    ],
+    "correctAnswer": "60 km/h",
+    "category": "Aptitude",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 16,
+    "questionText": "If a person can complete a task in 12 days, how long will it take for 3 people to complete the same task working together?",
+    "options": [
+      "3 days",
+      "4 days",
+      "5 days",
+      "6 days"
+    ],
+    "correctAnswer": "4 days",
+    "category": "Aptitude",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 17,
+    "questionText": "What is the next number in the sequence: 2, 6, 12, 20, ?",
+    "options": [
+      "28",
+      "30",
+      "32",
+      "36"
+    ],
+    "correctAnswer": "30",
+    "category": "Aptitude",
+    "difficulty": "Easy"
+  },
+  {
+    "quesKey": 18,
+    "questionText": "A sum of money amounts to 1600 in 2 years at simple interest. What will it amount to in 5 years?",
+    "options": [
+      "2000",
+      "2200",
+      "2400",
+      "2600"
+    ],
+    "correctAnswer": "2000",
+    "category": "Aptitude",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 19,
+    "questionText": "The ratio of the ages of A and B is 3:4. If the sum of their ages is 35, what is the age of A?",
+    "options": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "correctAnswer": "15",
+    "category": "Aptitude",
+    "difficulty": "Medium"
+  },
+  {
+    "quesKey": 20,
+    "questionText": "The cost of 5 pens and 3 pencils is 50 rupees. If the cost of one pen is 10 rupees, what is the cost of one pencil?",
+    "options": [
+      "5 rupees",
+      "6 rupees",
+      "7 rupees",
+      "8 rupees"
+    ],
+    "correctAnswer": "5 rupees",
+    "category": "Aptitude",
+    "difficulty": "Medium"
   }
+]
