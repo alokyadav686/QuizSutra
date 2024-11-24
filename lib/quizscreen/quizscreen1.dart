@@ -115,266 +115,264 @@ class _QuizscreenState extends State<Quizscreen> {
         foregroundColor: Colors.white,
         backgroundColor: Colors.purple,
       ),
-      drawer: Drawer(
-        backgroundColor: Colors.purple,
-        child: Column(
-          children: [
-            Spacer(),
-             Padding(
-              padding: const EdgeInsets.only(left: 6.0),
-              child: InkWell(
-                onTap: () {
-                  // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Quizcode()));
+      // drawer: Drawer(
+      //   backgroundColor: Colors.purple,
+      //   child: Column(
+      //     children: [
+      //       Spacer(),
+      //        Padding(
+      //         padding: const EdgeInsets.only(left: 6.0),
+      //         child: InkWell(
+      //           onTap: () {
+      //             // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Quizcode()));
                   
-                },
-                child: Container(
-                  height: 30,
-                  width: double.infinity,
-                  // color: Colors.black,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+      //           },
+      //           child: Container(
+      //             height: 30,
+      //             width: double.infinity,
+      //             // color: Colors.black,
+      //             child: Row(
+      //               mainAxisAlignment: MainAxisAlignment.center,
+      //               children: [
+      //                 Container(
+      //                   width: 50,
+      //                   child: Icon(Icons.cancel_presentation_sharp,color: Colors.white,)),
+      //                     Text("Quit",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),)
+      //               ],
+      //             ),
+      //           ),
+      //         ),
+      //       ),
+      //       SizedBox(height: 20,),
+      //     ],
+      //   ),
+      // ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Center(
+                child: Center(
+                  child: Stack(
+                    alignment: Alignment.center,
                     children: [
-                      Container(
-                        width: 50,
-                        child: Icon(Icons.cancel_presentation_sharp,color: Colors.white,)),
-                          Text("Quit",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: Colors.white),)
+                       Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("$minutes : $seconds", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
+                          Text("min", style: TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w500),),
+                        ],
+                      ),
+                     
+                    Stack(
+                      children: [
+                        Container(
+                        width: 110,
+                        height: 110,
+                        child: CircularProgressIndicator(
+                          value: seconds/60,
+                          valueColor: AlwaysStoppedAnimation(Colors.white),
+                          strokeWidth: 8,
+                          
+                        ),
+                        
+                        ),
+                        
+                      // Container(
+                      //    width: 150,
+                      //   height: 150,
+                      //   decoration: BoxDecoration(
+                      //     borderRadius: BorderRadius.circular(80),
+                      //     // color: Colors.white54
+      
+                      //     border: Border.all(
+                      //      color: Colors.white38, // Border color
+                      //            width: 4, // Border width
+                      //      ),
+                          
+                      //   ),
+      
+      
+                      // ),
+                    
+                      ]
+                    ),
+                    
                     ],
+                    
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: 20,),
-          ],
-        ),
-      ),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Center(
-                  child: Center(
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                         Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+              SizedBox(height: 40,),
+          
+              Container(
+                width: double.infinity,
+                // color: Colors.amber,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FutureBuilder(
+                    future: quiz, 
+                    builder: (BuildContext context , AsyncSnapshot snapshot){
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return Center(
+                            child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation(Colors.white)));
+                      }
+                      if( snapshot.hasData){
+          
+                        var quizData = snapshot.data["codingquiz"];
+                                //  print(quizData);
+                        
+                        var questions = quizData;
+                      
+                        if (selectedAnswers.length < questions.length) {
+                          selectedAnswers = List.generate(
+                              questions.length, (index) => '');
+                        }
+          
+      
+                        // if(isloaded==false){
+                        //   optionsList = questions[currentQuestionindex]["options"];
+          
+                        //   isloaded =true;    
+                          
+          
+                        // }
+          
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("$minutes : $seconds", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
-                            Text("min", style: TextStyle(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w500),),
-                          ],
-                        ),
-                       
-                      Stack(
-                        children: [
-                          Container(
-                          width: 110,
-                          height: 110,
-                          child: CircularProgressIndicator(
-                            value: seconds/60,
-                            valueColor: AlwaysStoppedAnimation(Colors.white),
-                            strokeWidth: 8,
-                            
-                          ),
-                          
-                          ),
-                          
-                        // Container(
-                        //    width: 150,
-                        //   height: 150,
-                        //   decoration: BoxDecoration(
-                        //     borderRadius: BorderRadius.circular(80),
-                        //     // color: Colors.white54
-
-                        //     border: Border.all(
-                        //      color: Colors.white38, // Border color
-                        //            width: 4, // Border width
-                        //      ),
-                            
-                        //   ),
-
-
-                        // ),
-                      
-                        ]
-                      ),
-                      
-                      ],
-                      
-                    ),
-                  ),
-                ),
-                SizedBox(height: 40,),
-            
-                Container(
-                  width: double.infinity,
-                  // color: Colors.amber,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FutureBuilder(
-                      future: quiz, 
-                      builder: (BuildContext context , AsyncSnapshot snapshot){
-                        if (snapshot.connectionState == ConnectionState.waiting) {
-                          return Center(
-                              child: CircularProgressIndicator(
-                                  valueColor: AlwaysStoppedAnimation(Colors.white)));
-                        }
-                        if( snapshot.hasData){
-            
-                          var quizData = snapshot.data["codingquiz"];
-                                  //  print(quizData);
-                          
-                          var questions = quizData;
                         
-                          if (selectedAnswers.length < questions.length) {
-                            selectedAnswers = List.generate(
-                                questions.length, (index) => '');
-                          }
-            
-
-                          // if(isloaded==false){
-                          //   optionsList = questions[currentQuestionindex]["options"];
-            
-                          //   isloaded =true;    
-                            
-            
-                          // }
-            
-                          return Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                          
-                               Text("Question ${currentQuestionindex +1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
-                               SizedBox(height: 10,),
-                                        
-                                        Container(
-                                                                              width: double.infinity,
-                                                                              decoration: BoxDecoration(
-                                                                               border: Border.all(color: Colors.white),
-                                                                               color: Colors.black26
-                                                                               // borderRadius: BorderRadius.circular(8),
-                                                                               // boxShadow: [BoxShadow(color: Colors.black26,)],
-                                                                              ),
-                                                                             child: Padding(
-                                                                               padding: const EdgeInsets.all(8.0),
-                                                                               child: Text(questions[currentQuestionindex]["questionText"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
-                                                                             ),
-                                                                            ),
-                          
-                                    SizedBox(height: 40,),
-                                    
-                                    ListView.builder(
-                                      shrinkWrap: true,
-                                      itemCount: questions[currentQuestionindex]["options"].length,
-                                      itemBuilder: (BuildContext context, int index){
-                                        var option = questions[currentQuestionindex]["options"][index];
-                                         bool isSelected = selectedAnswers[currentQuestionindex] == option;
-
+                             Text("Question ${currentQuestionindex +1} of ${questions.length}",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600, color: Colors.white),),
+                             SizedBox(height: 10,),
                                       
-                                        return Padding(
-                                          padding: const EdgeInsets.only(bottom: 10),
-                                          child: InkWell(
-                                            onTap: () {
-
-                                              onOptionSelected(option);
-
-                                              print("firstdebug ${option}");
-                                            },
-                                            child: Container(
-                                                   width: double.infinity,
-                                                                            
-                                                  decoration: BoxDecoration(
-                                                 
-                                                // color:optiontapped?  Color.fromARGB(255, 114, 20, 131): Colors.purple[50],
-                                                // color: const Color.fromARGB(255, 30, 29, 30),
-                                                color: isSelected ? Colors.black:Colors.black38,
-                                                borderRadius: BorderRadius.circular(18)
-                                                 ),
-                                                child: Center(child: Padding(
-                                            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-                                            child: Text(option ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
-                                              )),
-                                             ),
-                                          ),
-                                        );
-                                      }                                
-                                      ),
-                                                                                             
-                            ],
-                          );
-                        }
-            
-                        else{
-            
-                          return Center( child:  CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation(Colors.white),
-                          ),);
-            
-                        }
-                      },
-                      
-                      )
-                  ),
-                ),
-                SizedBox(height: 20,),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    GestureDetector(
-                      onTap: currentQuestionindex ==0 ? null: (){
-                          setState(() {
-                            
-                            currentQuestionindex--;
-                          });            
-                                             
-                      },
-                      child: Container(
-                        width: 150,
-                        height: 45,
-                        decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(60)
-                      
-                        ),
-                        child: Center(child: Text("Previous",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),)),
-                      
-                      ),
-                    ),
-
-                    GestureDetector(
-                      onTap: () {
-                         if (currentQuestionindex < 9) {
-                                setState(() {
-                                  currentQuestionindex++;
-                                  // isloaded = false;
-                                  // optiontapped=false;
-                                });
-                              }
-                          else{
-                            submitbtn();
-                          }    
+                                      Container(
+                                                                            width: double.infinity,
+                                                                            decoration: BoxDecoration(
+                                                                             border: Border.all(color: Colors.white),
+                                                                             color: Colors.black26
+                                                                             // borderRadius: BorderRadius.circular(8),
+                                                                             // boxShadow: [BoxShadow(color: Colors.black26,)],
+                                                                            ),
+                                                                           child: Padding(
+                                                                             padding: const EdgeInsets.all(8.0),
+                                                                             child: Text(questions[currentQuestionindex]["questionText"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
+                                                                           ),
+                                                                          ),
                         
-                      },
-                      child: Container(
-                        width: 150,
-                        height: 45,
-                        decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(60)
-                      
-                        ),
-                        child: Center(child: Text(currentQuestionindex!=9?"Next": "submit",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),)),
-                      
-                      ),
-                    ),
+                                  SizedBox(height: 40,),
+                                  
+                                  ListView.builder(
+                                    shrinkWrap: true,
+                                    itemCount: questions[currentQuestionindex]["options"].length,
+                                    itemBuilder: (BuildContext context, int index){
+                                      var option = questions[currentQuestionindex]["options"][index];
+                                       bool isSelected = selectedAnswers[currentQuestionindex] == option;
+      
+                                    
+                                      return Padding(
+                                        padding: const EdgeInsets.only(bottom: 10),
+                                        child: InkWell(
+                                          onTap: () {
+      
+                                            onOptionSelected(option);
+      
+                                            print("firstdebug ${option}");
+                                          },
+                                          child: Container(
+                                                 width: double.infinity,
+                                                                          
+                                                decoration: BoxDecoration(
+                                               
+                                              // color:optiontapped?  Color.fromARGB(255, 114, 20, 131): Colors.purple[50],
+                                              // color: const Color.fromARGB(255, 30, 29, 30),
+                                              color: isSelected ? Colors.black:Colors.black38,
+                                              borderRadius: BorderRadius.circular(18)
+                                               ),
+                                              child: Center(child: Padding(
+                                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                                          child: Text(option ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
+                                            )),
+                                           ),
+                                        ),
+                                      );
+                                    }                                
+                                    ),
+                                                                                           
+                          ],
+                        );
+                      }
+          
+                      else{
+          
+                        return Center( child:  CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation(Colors.white),
+                        ),);
+          
+                      }
+                    },
                     
-                  ],
+                    )
                 ),
-                         
-              ],
-            ),
+              ),
+              SizedBox(height: 20,),
+      
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: currentQuestionindex ==0 ? null: (){
+                        setState(() {
+                          
+                          currentQuestionindex--;
+                        });            
+                                           
+                    },
+                    child: Container(
+                      width: 150,
+                      height: 45,
+                      decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(60)
+                    
+                      ),
+                      child: Center(child: Text("Previous",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),)),
+                    
+                    ),
+                  ),
+      
+                  GestureDetector(
+                    onTap: () {
+                       if (currentQuestionindex < 9) {
+                              setState(() {
+                                currentQuestionindex++;
+                                // isloaded = false;
+                                // optiontapped=false;
+                              });
+                            }
+                        else{
+                          submitbtn();
+                        }    
+                      
+                    },
+                    child: Container(
+                      width: 150,
+                      height: 45,
+                      decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(60)
+                    
+                      ),
+                      child: Center(child: Text(currentQuestionindex!=9?"Next": "submit",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),)),
+                    
+                    ),
+                  ),
+                  
+                ],
+              ),
+                       
+            ],
           ),
         ),
       ),

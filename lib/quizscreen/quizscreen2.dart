@@ -110,9 +110,7 @@ class _Quizscreen2State extends State<Quizscreen2> {
         foregroundColor: Colors.white,
         backgroundColor: Colors.purple,
       ),
-      drawer: Drawer(
-        backgroundColor: Colors.purple,
-      ),
+      
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
