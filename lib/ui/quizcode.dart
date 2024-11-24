@@ -23,6 +23,8 @@ class _QuizcodeState extends State<Quizcode> {
     print("object");
   }
 
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,8 +102,13 @@ class _QuizcodeState extends State<Quizcode> {
                     InkWell(
                       onTap: () {
                         // print("object");
-                        jointap();
-                        // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Waitingroom()));
+                        // jointap();
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz()));
+                        if(usernamecontroller == "admin" && codeinputcontroller == "code"){
+                        print("object");
+
+                        }
+
                       },
                       child: Container(
                         width: 200,

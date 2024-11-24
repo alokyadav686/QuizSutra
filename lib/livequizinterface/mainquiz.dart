@@ -20,8 +20,7 @@ class _MainquizState extends State<Mainquiz> {
   List<String> selectedAnswers = [];
   bool isSubmitted = false;
   int score =0;
-  bool isSelected=false;
-   var isLoaded = false;
+  bool isLoaded = false;
 
   @override
   void initState() {
@@ -33,7 +32,7 @@ class _MainquizState extends State<Mainquiz> {
   }
   @override
   void dispose() {
-    timer!.cancel();
+    timer?.cancel();
     super.dispose();
   }
 
@@ -71,11 +70,13 @@ class _MainquizState extends State<Mainquiz> {
     }
   }
 
- onOptionSelected(String answer) {
+ onOptionSelected(String answer, question) {
     if (!isSubmitted) {
       setState(() {
         selectedAnswers[currentQuestionindex] = answer;
-        if (answer == selectedAnswers[currentQuestionindex]) {
+        var correctAnswer = question["correctAnswer"];
+
+        if (answer == correctAnswer) {
           score++;
         }
         // isSubmitted=true;
@@ -163,18 +164,18 @@ class _MainquizState extends State<Mainquiz> {
                              SizedBox(height: 10,),
                                       
                                       Container(
-                                                                            width: double.infinity,
-                                                                            decoration: BoxDecoration(
-                                                                             border: Border.all(color: Colors.white),
-                                                                             color: Colors.black26
-                                                                             // borderRadius: BorderRadius.circular(8),
-                                                                             // boxShadow: [BoxShadow(color: Colors.black26,)],
-                                                                            ),
-                                                                           child: Padding(
-                                                                             padding: const EdgeInsets.all(8.0),
-                                                                             child: Text(questions[currentQuestionindex]["questionText"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
-                                                                           ),
-                                                                          ),
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                     border: Border.all(color: Colors.white),
+                                      color: Colors.black26
+                                      // borderRadius: BorderRadius.circular(8),
+                                      // boxShadow: [BoxShadow(color: Colors.black26,)],
+                                     ),
+                                    child: Padding(
+                                     padding: const EdgeInsets.all(8.0),
+                                      child: Text(questions[currentQuestionindex]["questionText"],style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700,color: Colors.white),),
+                                    ),
+                                  ),
                         
                                   SizedBox(height: 40,),
                                   
@@ -191,7 +192,7 @@ class _MainquizState extends State<Mainquiz> {
                                         child: InkWell(
                                           onTap: () {
       
-                                            onOptionSelected(option);
+                                            onOptionSelected(option, questions[currentQuestionindex]);
       
                                             print("firstdebug ${option}");
                                           },

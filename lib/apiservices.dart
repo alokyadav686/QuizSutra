@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
   var link1 = "https://quizapp-r80t.onrender.com/quizzes/category/Coding";
   var link2 = "https://quizapp-r80t.onrender.com/quizzes/category/Aptitude";
   var link3 = "https://quizapp-r80t.onrender.com/quizzes/category/Reasoning";
+  var link4 = "https://quizapp-r80t.onrender.com/admin/createQuiz";
 
 Future getQuiz() async{
   String codingquiz =await rootBundle.loadString("assets/sampleapi/codingquiz.json");
@@ -43,4 +44,15 @@ Future getallQuiz() async{
     };
 
 }
+}
+
+Future liveQuiz() async{
+
+    var livequiz = await http.get(Uri.parse(link4));
+
+    if (livequiz.statusCode ==200){
+
+      return jsonDecode(livequiz.body);
+    }
+
 }

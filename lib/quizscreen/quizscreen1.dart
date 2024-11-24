@@ -379,22 +379,3 @@ class _QuizscreenState extends State<Quizscreen> {
     );
   }
 }
-
-// Widget options( String optiontxt,VoidCallback ontap){
-//   return InkWell(
-//     onTap: ontap,
-//     child: Container(
-//                                 width: double.infinity,
-//                                 // height: 50,
-//                                 decoration: BoxDecoration(
-//                                 // color: Colors.amber,
-//                                  color:Color.fromARGB(255, 114, 20, 131),
-//                                 borderRadius: BorderRadius.circular(18)
-//                                 ),
-//                                 child: Center(child: Padding(
-//                                   padding: const EdgeInsets.symmetric(vertical: 15),
-//                                   child: Text(optiontxt ,style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),),
-//                                 )),
-//                               ),
-//   );
-// }
