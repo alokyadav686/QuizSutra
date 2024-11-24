@@ -54,9 +54,9 @@ class _Offlinequizinterface1State extends State<Offlinequizinterface1> {
                       Row(
                         // mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Relatedto("HTML"),                  
+                          Relatedto("Python"),                  
                           SizedBox(width: 5,),                  
-                          Relatedto("CSS"),
+                          Relatedto("Java"),
                           SizedBox(width: 5,),                  
                           Relatedto("JavaScript"),
                   

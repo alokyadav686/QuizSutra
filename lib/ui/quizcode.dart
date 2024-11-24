@@ -22,10 +22,10 @@ class _QuizcodeState extends State<Quizcode> {
 
   jointap()async{
 
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz(username: usernamecontroller.text,)));
     print("ds");
 
-    await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz()));
+    await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz(username: usernamecontroller.text,)));
     print("object");
   }
 
@@ -104,15 +104,20 @@ class _QuizcodeState extends State<Quizcode> {
                     ),  
                         
                     SizedBox(height: 30,),
-                        
-                    InkWell(
+
+                        InkWell(
                       onTap: () {
                         // print("object");
                         // jointap();
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz()));
-                        if(usernamecontroller == "admin" && codeinputcontroller == "code"){
+                        String username = usernamecontroller.text;
+                        if(username.isNotEmpty){
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz(username: username,)));
                         print("object");
 
+                        }
+                      else {
+      
+                          print("Please enter a valid username.");
                         }
 
                       },

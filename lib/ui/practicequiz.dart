@@ -273,7 +273,7 @@ int currentPage =0;
                     items: [
                       InkWell(
                         onTap: (){
-                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface1()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface1()));
 
                         },
                         child: Container(
@@ -288,7 +288,7 @@ int currentPage =0;
 
                    InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface2()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface2()));
                     },
                      child: Container(
                       
@@ -302,7 +302,7 @@ int currentPage =0;
                   
                    InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface3()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface3()));
                     },
                      child: Container(
                       
@@ -349,18 +349,18 @@ int currentPage =0;
                     children: [
                         buildCategoryCard("Coding","Duration: 30 min","Questions = 30",Icon(Icons.code, size: 90, color: Colors.purple),  () {
                           // print("quiz1 tapped");
-                             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface1()));
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface1()));
                         }),
                           SizedBox(height: 20),
                   
                           buildCategoryCard("Aptitude","Duration: 30 min","Questions = 30", Icon(Icons.calculate, size: 90, color: Colors.purple), () {
                             // print("quiz2 tapped");
-                             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface2()));
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface2()));
                           }),
                           SizedBox(height: 20),
                                             
                           buildCategoryCard("Logical Reasoning","Duration: 30 min","Questions = 30",Icon(Icons.lightbulb_outline, size: 90, color: Colors.purple),  () {
-                             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface3()));
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>Offlinequizinterface3()));
                           }),
                           SizedBox(height: 20),
                     ],
