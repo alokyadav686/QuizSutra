@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:quizsutra/livequizinterface/mainquiz.dart';
 import 'package:quizsutra/livequizinterface/waitingroom.dart';
 import 'package:quizsutra/ui/practicequiz.dart';
@@ -18,15 +22,6 @@ class _QuizcodeState extends State<Quizcode> {
   void initState() {
     
     super.initState();
-  }
-
-  jointap()async{
-
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz(username: usernamecontroller.text,)));
-    print("ds");
-
-    await Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz(username: usernamecontroller.text,)));
-    print("object");
   }
 
   
@@ -108,17 +103,19 @@ class _QuizcodeState extends State<Quizcode> {
                         InkWell(
                       onTap: () {
                         // print("object");
+                        PostingUser();
                         // jointap();
-                        String username = usernamecontroller.text;
-                        if(username.isNotEmpty){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz(username: username,)));
-                        print("object");
+                      //   String username = usernamecontroller.text;
+                      //   if(username.isNotEmpty){
+                      //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz(username: username,)));
+                      //   print("object");
 
-                        }
-                      else {
+
+                      //   }
+                      // else {
       
-                          print("Please enter a valid username.");
-                        }
+                      //     print("Please enter a valid username.");
+                      //   }
 
                       },
                       child: Container(
@@ -169,4 +166,32 @@ class _QuizcodeState extends State<Quizcode> {
       ),
     );
   }
+  void PostingUser()async{
+    var link4 = "https://quizapp-r80t.onrender.com/QuizEntry/enter";
+
+  var data ={
+    
+
+    "username" :usernamecontroller.text,
+    "quizId" : codeinputcontroller.text
+
+  };
+
+  var bodyy =jsonEncode(data);
+  var liveQuizz=Uri.parse(link4);
+
+  Response response = await http.post(
+    liveQuizz,
+    body: bodyy,
+    headers: {
+      "Content-Type" : "application/json"
+    }
+
+  );
+  var dataa= jsonDecode(response.body);
+  print(dataa);
+
+  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mainquiz(username: usernamecontroller.text,apiresponse: dataa)));
+
+}
 }

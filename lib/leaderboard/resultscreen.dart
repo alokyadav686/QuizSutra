@@ -45,14 +45,14 @@ class _ResultScreenState extends State<ResultScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("${result['question']}",style: TextStyle(fontSize: 16, color:Colors.white),),
+                              Text("${result["question"]}",style: TextStyle(fontSize: 16, color:Colors.white),),
 
                               SizedBox(height: 10),
 
-                              Text("Your Answer: ${result['userAnswer']}",style: TextStyle(fontSize: 16, color: result["userAnswer"]== result["correctAnswer"] ? Colors.green : Colors.red),),
+                              Text("Your Answer: ${result["userAnswer"]}",style: TextStyle(fontSize: 16, color: result["userAnswer"]== result["correctAnswer"] ? Colors.green : Colors.red),),
                               
                               SizedBox(height: 5),
-                              Text("Correct Answer: ${result['correctAnswer']}",style: TextStyle(fontSize: 16, color: Colors.green),),
+                              Text("Correct Answer: ${result["correctAnswer"]}",style: TextStyle(fontSize: 16, color: Colors.green),),
                             ],
                           ),
                         ),

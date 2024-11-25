@@ -50,15 +50,18 @@ class _Offlinequizinterface3State extends State<Offlinequizinterface3> {
                       Text("Related To -",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.purple),),
                       
                       SizedBox(height: 10,),
-                      Row(
-                        // mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Relatedto("Analogy"),                  
-                          SizedBox(width: 5,),                  
-                          Relatedto("Critical Thinking"),
-                          
-                  
-                        ],
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Relatedto("Analogy"),                  
+                            SizedBox(width: 5,),                  
+                            Relatedto("Critical Thinking"),
+                            
+                                          
+                          ],
+                        ),
                       )
                     ],
                   ),

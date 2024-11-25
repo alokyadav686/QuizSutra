@@ -51,13 +51,16 @@ class _Offlinequizinterface2State extends State<Offlinequizinterface2> {
                       Text("Related To -",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.purple),),
                       
                       SizedBox(height: 10,),
-                      Row(
-                        // mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Relatedto("Number Series"),                  
-                          SizedBox(width: 5,),                  
-                          Relatedto("Percentage"),
-                        ],
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Relatedto("Number Series"),                  
+                            SizedBox(width: 5,),                  
+                            Relatedto("Percentage"),
+                          ],
+                        ),
                       )
                     ],
                   ),
