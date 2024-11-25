@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:quizsutra/leaderboard/leaderboard.dart';
 import 'package:quizsutra/ui/quizcode.dart';
 
 class Mainquiz extends StatefulWidget {
@@ -90,12 +91,39 @@ class _MainquizState extends State<Mainquiz> {
           backgroundColor: Colors.purple,
           content: Text("Your score is: $score / ${widget.apiresponse['questions'].length}", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500,color: Colors.white),),
           actions: <Widget>[
-            TextButton(
-              onPressed: () {
+            InkWell(
+              onTap: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Leaderboard()));
+              },
+              child: Container(              
+                decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  child: Text("View Leaderboard",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),),
+                ),
+              ),
+            ),
+            SizedBox(height: 10,),
+
+            InkWell(
+              onTap: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Quizcode()));
               },
-              child: Text("OK",style: TextStyle(fontSize: 18,color: Colors.white),),
+              child: Container(              
+                decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50)
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  child: Text("Home",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),),
+                ),
+              ),
             ),
+           
           ],
         );
       },
@@ -161,7 +189,13 @@ class _MainquizState extends State<Mainquiz> {
 
             SizedBox(height: 20,),
 
-            Text("Question ${currentQuestionIndex + 1}",style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.white),),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Question ${currentQuestionIndex + 1}",style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.white),),
+            Text("username : ${widget.username} ",style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.white),),
+              ],
+            ),
             
             SizedBox(height: 10),
 
