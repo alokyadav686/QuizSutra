@@ -18,7 +18,7 @@ class _QuizscreenState extends State<Quizscreen> {
   void initState() {
     
     super.initState();
-    quiz =getallQuiz();
+    quiz =getQuiz();
     startTimer();
   }
 

@@ -38,7 +38,6 @@ class _WaitingroomState extends State<Waitingroom> {
            ),
          ),
        ),
-      
       ),
     );
   }
